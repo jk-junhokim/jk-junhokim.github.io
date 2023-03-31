@@ -1,5 +1,7 @@
+# 대학교
 - layout: left
-  name: 라이스 대학교 Rice University
+  name: 라이스 대학교 
+  Rice University
   dates: 2020.08 ~ 2025.05
   link: https://www.rice.edu/
   quote: >
@@ -8,6 +10,9 @@
     * 전공: 컴퓨터 사이언스 (computer science)
     * 학점: 3.62 / 4.0
     * 수강 수업: 알고리즘 및 데이터구조, 선형대수학, 객체지향 프로그래밍, 컴퓨팅 사고, 확률과 통계
+    * 대통령과학장학금 해외 장학생 선정 ($50000/year)
+
+# 고등학교
 - layout: left
   name: 청심국제고등학교 Cheongshim International Academy
   dates: 2017.03 ~ 2020.02
@@ -18,4 +23,3 @@
     * 이과 과정 수료 (물리 전공)
     * 학점 3.92 / 4.0
     * AP (Advanced Placement) 수업 수강으로 대학 학점 미리 취득 및 학업 역량 발전
-    * 대통령과학장학금 해외 장학생 선정 ($50000/year)
