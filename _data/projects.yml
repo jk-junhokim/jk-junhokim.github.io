@@ -2,7 +2,7 @@
   name: 자동 채점 시스템 개발
   link: 
   quote: >
-    2023.01. ~ 현재
+
   description: | # this will include new lines to allow paragraphs
     * 대학교 comp 215 수업에서 구축하고 있는 자동 채점 시스템을 객체지향 프로그래밍 시점에서 접근 및 설계
     * 
@@ -29,6 +29,7 @@
   name: A* 알고리즘을 활용한 최단 거리 계산
   link:
   quote: >
+
   description: | # this will include new lines to allow paragraphs
     * 대학교 comp 140 수업에서 구축한 A* 알고리즘을 기반으로 한 최단거리 계산 프로그램.
     * 미국 텍사스 주 구글 지도를 기반으로 BFS, DFS, A* 알고리즘을 비교 분석하여 옵티멀 알고리즘 추천.
