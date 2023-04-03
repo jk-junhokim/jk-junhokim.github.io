@@ -24,7 +24,7 @@
   quote: >
 
   description: | # this will include new lines to allow paragraphs
-    * MNIST 이미지를 분류를 위한 CNN을 구축하여 98.89%의 정확도에 도달 (https://grinders.tistory.com/category/Tech%20Development/Deep%20Learning%20%28CNN%29)
+    * MNIST 이미지를 분류를 위한 CNN을 구축하여 98.89%의 정확도에 도달
     * 가중치 초기값 설정 프로세스를 자동화하여 다양한 가중치 변수(He, Xavier 등) 및 활성화 함수(Sigmoid, Relu)을 테스트하고 비교 분석함
 
 - layout: left
@@ -36,8 +36,8 @@
     * Computational Thinking 수업에서 A* 알고리즘을 기반으로 한 최단거리 계산 프로그래을 설계
     * Google Maps API를 기반으로 미국 텍사스 주에 BFS, DFS, A* 알고리즘을 적용함
 
-- layout: top-middle
-  name: Mathematical Consideration on Optimal Tear Vol.
+- layout: left
+  name: 최적 눈물량에 대한 유체역학적 접근
   link:
   quote: >
 
