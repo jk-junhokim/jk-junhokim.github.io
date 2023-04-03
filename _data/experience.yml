@@ -18,9 +18,9 @@
   quote: >
 
   description: | # this will include new lines to allow paragraphs
-     * 대규모 트래픽, 데이터 환경에서의 API/Batch 개발
-     * 정산, 포인트, 주문 시스템의 레거시 개편
-     * 
+     * 탄자니아에 위한 마세추 중고등학교 (Macechu Secondary School) 를 돕기 위해 수익성 있는 프로젝트를 설계함
+     * 자원봉사자 모집, 재정 문제 관리 및 후원자와 연락을 취함
+     * 비즈니스팀 신입 인터뷰를 진행함
 
 - layout: left
   company: 기초과학연구원
@@ -30,5 +30,7 @@
   quote: >
 
   description: | # this will include new lines to allow paragraphs
-     * 포털 메인 페이지, 회원 서비스의 메인 개발자로 개발/운영
-     * 
+     * 초전도 양자 간섭 장치 관련 연구 사례 및 결과 탐구
+     * 샤피로 단계 (Shapiro steps) 를 성공적으로 유도하고 그 과정에서 플랑크 상수를 확인할 수 있는 유익한 데이터를 산출함
+     * 연구 결과를 Center for Physics Precision Axion Dark Matter Search 책에 출판함
+     * 연구 논문 “Basics of Superconducting Quantum Interference Devices (SQUID): SQUID based instrumentation for Axion search and precision physics" 을 작성함

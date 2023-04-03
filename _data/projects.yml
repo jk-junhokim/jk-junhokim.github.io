@@ -4,8 +4,10 @@
   quote: >
 
   description: | # this will include new lines to allow paragraphs
-    * 대학교 comp 215 수업에서 구축하고 있는 자동 채점 시스템을 객체지향 프로그래밍 시점에서 접근 및 설계
-    * 
+    * Program Design 수업에서 자동 채점 시스템을 객체지향 프로그래밍 시점에서 접근 및 설계
+    * 트리 구조를 기반으로 각 노드가 자바의 각 타입을 표현하도록 시스템 구축 (Integer, Tuple, Set, Dict etc.)
+    * 각 노드를 파이썬 타입으로 변형할 수 있도록 재귀 함수를 적용함
+    * 화이트박스와 블랙 박스 테스팅을 활용해서 엣지 (edge) 케이스를 커버함
 
 - layout: top-middle
   name: 라이스 대학교 데이터톤
@@ -13,8 +15,8 @@
   quote: >
 
   description: | # this will include new lines to allow paragraphs
-    * 
-    * 
+    * 32가지 환경 요인을 분석하고 시각화하여 ROI가 가장 높은 미국 주  (US state) 를 예측함
+    * sklearn & Pandas를 사용하여 선형, 다항식, KNN 및 가우스 공정 회귀 모델 비교
 
 - layout: top-middle
   name: CNN 기반 MNIST 데이터 분류
@@ -22,8 +24,8 @@
   quote: >
 
   description: | # this will include new lines to allow paragraphs
-    * 
-    * 
+    * MNIST 이미지를 분류를 위한 CNN을 구축하여 98.89%의 정확도에 도달 (https://grinders.tistory.com/category/Tech%20Development/Deep%20Learning%20%28CNN%29)
+    * 가중치 초기값 설정 프로세스를 자동화하여 다양한 가중치 변수(He, Xavier 등) 및 활성화 함수(Sigmoid, Relu)을 테스트하고 비교 분석함
 
 - layout: top-middle
   name: A* 알고리즘을 활용한 최단 거리 계산
@@ -31,8 +33,8 @@
   quote: >
 
   description: | # this will include new lines to allow paragraphs
-    * 대학교 comp 140 수업에서 구축한 A* 알고리즘을 기반으로 한 최단거리 계산 프로그램.
-    * 미국 텍사스 주 구글 지도를 기반으로 BFS, DFS, A* 알고리즘을 비교 분석하여 옵티멀 알고리즘 추천.
+    * Computational Thinking 수업에서 A* 알고리즘을 기반으로 한 최단거리 계산 프로그래을 설계
+    * Google Maps API를 기반으로 미국 텍사스 주에 BFS, DFS, A* 알고리즘을 적용함
 
 - layout: top-middle
   name: Mathematical Consideration on Optimal Tear Vol.
