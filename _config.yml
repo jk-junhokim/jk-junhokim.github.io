@@ -3,7 +3,7 @@ repository: jk-junhokim/jk-junhokim.github.io
 # favicon: images/favicon.ico
 
 # Personal info
-name: 김준호 Junho Kim
+name: 김준호
 title: Computer Science 전공 @ Rice University
 email: jk84@rice.edu
 website: https://grinders.tistory.com/
@@ -47,8 +47,8 @@ about_profile_image: images/profile.jpeg
 about_content: | # this will include new lines to allow paragraphs
   라이스 대학교에 재학중인 2학년 컴퓨터 사이언스 전공 학생입니다. 기존 물리 전공에서 시작하여 수학과 코딩에 관심을 가지게 되었으며 Flask를 이용한 파이썬 기반 백엔드 구축을 해보며 본격적으로 진로를 CS 전공으로 바꾸었습니다. <br/>
   군복무간 머신러닝에 관심을 가지게 되었으며 **numpy와 pandas** 기본기에서 시작해서 **신경망**을 공부하기 시작했습니다. <br/>
-  파이썬을 사용해서 **CNN**을 구축해보았으며 현재는 **pyTorch와 RNN**을 공부하고 있습니다. 학업과 개인 관심사를 병행하여 진행하다보니 작년보다 개인 프로젝트에 투자하는 시간이 줄어들었지만 **방학**을 활용하여 딥러닝에 올인하고 싶습니다. <br/>
-  현재 2023 여름 (4월 말 ~ 9월 초) 인턴십 기회를 적극적으로 구하고 있습니다. 새로운 경험과 도전을 늘 반기는 자세로 기회를 찾고 있습니다. <br/>
+  파이썬을 사용해서 **CNN**을 구축해보았으며 현재는 **pyTorch와 RNN**을 공부하고 있습니다. 학업과 개인 관심사를 병행하여 진행하다보니 작년보다 개인 프로젝트에 투자하는 시간이 줄어들었지만 방학을 활용하여 딥러닝에 올인하고 싶습니다. <br/>
+  **2023 여름** **(4월 말 ~ 9월 초)** 인턴십 기회를 적극적으로 구하고 있습니다. 새로운 경험과 도전을 늘 반기는 자세로 기회를 찾고 있습니다. <br/>
    <br/>
   <mark>기술 & 언어 스택:<mark/><br/>
   - 상: Python, Java, IntelliJ, VsCode <br/>
