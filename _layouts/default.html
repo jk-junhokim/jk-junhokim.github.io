@@ -12,6 +12,10 @@
 
             {%- include about.html -%}
 
+            {%- if site.data.education.size > 0 -%}
+                {%- include education.html -%}
+            {%- endif -%}
+
             {%- if site.data.experience.size > 0 -%}
                 {%- include experience.html -%}
             {%- endif -%}
@@ -24,13 +28,9 @@
                 {%- include skill.html -%}
             {%- endif -%}
 
-            {%- if site.data.opensource.size > 0 -%}
+            <!-- {%- if site.data.opensource.size > 0 -%}
                 {%- include opensource.html -%}
-            {%- endif -%}
-
-            {%- if site.data.education.size > 0 -%}
-                {%- include education.html -%}
-            {%- endif -%}
+            {%- endif -%} -->
 
             {%- include more.html -%}
 
