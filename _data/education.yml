@@ -1,24 +1,12 @@
 # 대학교
 - layout: left
-  name: 라이스 대학교
-  dates: 2020.08 ~ 2025.05
+  name: Rice University
+  dates: Augest 2020 ~ May 2025
   link: https://www.rice.edu/
   quote: >
 
   description: | # this will include new lines to allow paragraphs
-    * 전공: 컴퓨터 사이언스 (computer science)
-    * 학점: 3.52 / 4.0
-    * 수강 수업: 알고리즘 및 데이터구조, 선형대수학, 객체지향 프로그래밍, 컴퓨팅 사고, 확률과 통계
-    * 대통령과학장학금 해외 장학생 선정 ($50k/year)
-
-# 고등학교
-- layout: left
-  name: 청심국제고등학교
-  dates: 2017.03 ~ 2020.02
-  link: http://www.csia.hs.kr/
-  quote: >
-
-  description: | # this will include new lines to allow paragraphs
-    * 이과 과정 수료 (물리 전공)
-    * 학점 3.92 / 4.0
-    * AP (Advanced Placement) 수업 수강으로 대학 학점 미리 취득 및 학업 역량 발전
+    * Major: Computer Science
+    * Minor: Entrepreneurship
+    * GPA: 3.37 / 4.0
+    * Course Work: Algorithms & Datastructures, Linear Algebra, Object Oriented Programming, Computational Thinking, Probability & Statistics, Practical Machine Learning

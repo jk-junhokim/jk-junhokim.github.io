@@ -37,15 +37,14 @@ linkedin_username: jk-junhokim
 # about_title: About Me
 about_profile_image: images/profile.jpeg
 about_content: | # this will include new lines to allow paragraphs
-  안녕하세요.<br/><br/>
-  라이스 대학교에 재학중인 2학년 컴퓨터 사이언스 전공 학생입니다.<br/><br/>
-  컴퓨팅 사고, 알고리즘, 데이터 구조, 선형대수학, 객체지향 프로그래밍 등의 수업을 들으며 엔지니어로서의 길을 걸어가고 있는 중입니다.<br/><br/>
-  군복학 이후 학교 수업 및 활동에 적극적으로 참여하고 배우며 현재로서 실무에 뛰어들고자 인턴십 기회를 구하고 있습니다.<br/><br/>
-  군복무 간 Flask를 이용한 파이썬 기반 백엔드 구축을 해보며 본격적으로 개인 프로젝트 및 방향성을 찾기 시작했습니다. 지금은 머신러닝에 몰두하고 있으며, **numpy**와 **pandas**에 점차 익숙해지며 **신경망** 탐구를 하고 있습니다. 파이썬 기반으로 **CNN**을 구축해보았으며 현재는 **PyTorch**와 **RNN**을 공부하고 있습니다.<br/><br/>
-  2023년도 여름을 활용하여 **Deep Learning (CV & NLP)**에 몰두하고 싶습니다. 머신러닝 이외의 분야에도 관심이 있어서 다양한 기회를 모색중입니다. 인턴십을 통해 기업에 기여하는 인재로서 성장하며 함께 발전하고 싶습니다. 지금껏 프로젝트를 진행하며 다양한 사람들과 함께 일하고 색다른 견해와 피드백을 수용하는 환경에서 성장을 했습니다. 앞으로도 커뮤니케이션이 적극적으로 이루어지는 환경에서 일하기를 희망하고 있습니다.<br/><br/>
-  <mark>기술 & 언어 스택:<mark/><br/>
-  - 상: Python, Java, IntelliJ, VsCode <br/>
-  - 중: Flask, Pandas, PyTorch, Git, Github, Jupyter Notebook <br/>
+  <br/><br/>
+  As a computer science major at Rice University, I have undertaken a diverse range of coursework encompassing algorithms, data structures, program design, machine learning, and other mathematically rigorous subjects<br/><br/>
+  My genuine interest in software engineering and deep learning was cultivated through personal projects that involved convolutional neural networks. In addition, my participation in the Rice 2023 Datathon allowed me to engage with real-world data and apply computational analysis. Throughout the summer of 2023, I experienced exponential growth in my technical skills, including data preprocessing, the construction of ML pipelines, and the design and implementation of neural network models. I have successfully collaborated with diverse teams on projects that required effective communication and cooperation.<br/><br/>
+  Logical thinking, analytical skills, and unwavering commitment to quality are some of my key qualities.<br/><br/>
+  <mark>Technical Skills:<mark/><br/>
+  - Libraries/Frameworks: PyTorch, HuggingFace, OpenCV, Scikit-learn, Pandas <br/>
+  - Tools: MLflow, WandB, Github <br/>
+  -Web/App: Flask, Beautifulsoup, PyQt5 <br/>
 
 
 # Education Section

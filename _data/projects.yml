@@ -1,49 +1,35 @@
 - layout: left
-  name: 텍스트 기반 테스트 케이스 생성 프로그램
-  link: Automated Test Case Generator
+  name: Rice Computational Imaging Lab
+  link: https://computationalimaging.rice.edu/
   quote: >
 
   description: | # this will include new lines to allow paragraphs
-    * Program Design 수업에서 텍스트 (config file) 기반 테스트 케이스 생성 프로그램을 객체지향적으로 접근 및 설계
-    * 트리 구조를 기반으로 각 노드가 자바의 각 타입을 표현하도록 시스템 구축 (Integer, Tuple, Set, Dict etc.)
-    * 각 노드를 파이썬 타입으로 변형할 수 있도록 재귀 함수를 적용함
-    * 화이트박스와 블랙 박스 테스팅을 활용해서 엣지 (edge) 케이스를 커버함
+    * Developing linear image reconstruction model compatible with lensless cameras.
+    * Experimenting with RCNN for Face Detection.
 
 - layout: left
-  name: 라이스 대학교 데이터톤
+  name: Rice Datathon
   link: https://devpost.com/software/fa-83q4km
   quote: >
 
-  description: | # this will include new lines to allow paragraphs
-    * 32가지 환경 요인을 분석하고 시각화하여 ROI가 가장 높은 미국 주 (US state) 를 예측함
-    * sklearn & Pandas를 사용하여 선형, 다항식, KNN 및 가우스 공정 회귀 모델 비교
-    * 각 주별 정치 현황 및 앞으로의 선거 예상 데이터를 수치화하여 외부 데이터로 활용함
+  description: |
+    * Conducted in-depth analysis and visualized 32 environmental factors to predict the optimal state for the highest Return on Investment (ROI) in renewable energy projects.
+    * Performed a comprehensive comparison of linear and polynomial regression models for the prediction task.
 
 - layout: left
-  name: CNN 기반 MNIST 데이터 분류
+  name: Open Dataset Classification
   link: https://github.com/jk-junhokim/deep_learning_cnn
   quote: >
 
-  description: | # this will include new lines to allow paragraphs
-    * 스탠포드 대학교 CS231n 수업을 기반으로 진행한 개인 프로젝트
-    * MNIST 이미지를 분류를 위한 CNN을 구축하여 98.89%의 정확도에 도달
-    * 가중치 초기값 설정 프로세스를 자동화하여 다양한 가중치 변수(He, Xavier 등) 및 활성화 함수(Sigmoid, Relu)을 테스트하고 비교 분석함
-    * LeNet, AlexNet 등등이 초기 신경망 아키텍처를 학습
+  description: |
+    * Streamlined and automated the weight initialization process for diverse weights, including He and Xavier, and activation functions, such as ReLU.
+    * Conducted extensive experiments using VGG, ResNet, DenseNet, and InceptionNet architectures on both FashionMNIST and CIFAR-10 datasets.
 
 - layout: left
-  name: A* 알고리즘을 활용한 최단 거리 계산
-  link:
+  name: Automated Test Case Generator
+  link: Automated Test Case Generator
   quote: >
 
-  description: | # this will include new lines to allow paragraphs
-    * Computational Thinking 수업에서 A* 알고리즘을 기반으로 한 최단거리 계산 프로그래을 설계
-    * Google Maps API를 기반으로 미국 텍사스 주에 BFS, DFS, A* 알고리즘을 적용함
-
-- layout: left
-  name: 최적 눈물량에 대한 유체역학적 접근
-  link:
-  quote: >
-
-  description: | # this will include new lines to allow paragraphs
-    * 안구건조증의 해결책으로 최적 눈물량의 수학적 모델 개발
-    * 오류 최소화를 위해 생물학과 물리를 기반으로 유체역학적 측면에서 문제를 접근
+  description: |
+    * Implemented a tree based system structure that takes python code and converts them into java data types.
+    * Utilized white and black box testing to find edge case unit tests
