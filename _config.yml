@@ -3,8 +3,8 @@ repository: jk-junhokim/jk-junhokim.github.io
 # favicon: images/favicon.ico
 
 # Personal info
-name: 김준호
-title: Computer Science 전공 @ Rice University
+name: Junho Kim
+title: Computer Science @ Rice University
 email: jk84@rice.edu
 website: https://grinders.tistory.com/
 
@@ -14,7 +14,6 @@ darkmode: never
 # Social links
 github_username:  jk-junhokim
 # stackoverflow_username: "00000001"
-instagram_username: junhok0715
 linkedin_username: jk-junhokim
 # orcid_username: 0000-0000-0000-0000
 
@@ -44,7 +43,7 @@ about_content: | # this will include new lines to allow paragraphs
   <mark>Technical Skills:<mark/><br/>
   - Libraries/Frameworks: PyTorch, HuggingFace, OpenCV, Scikit-learn, Pandas <br/>
   - Tools: MLflow, WandB, Github <br/>
-  -Web/App: Flask, Beautifulsoup, PyQt5 <br/>
+  - Web/App: Flask, Beautifulsoup, PyQt5 <br/>
 
 
 # Education Section

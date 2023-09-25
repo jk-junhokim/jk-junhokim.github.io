@@ -6,9 +6,9 @@
   quote: >
     
   description: | # this will include new lines to allow paragraphs
-    * https://www.linkedin.com/posts/tesserinc_rtdreeukr-ssqrqrsjy-rhytfmtqauniswmtfeslq-activity-7095235929002414080-1LyX?utm_source=share&utm_medium=member_desktop
     * Architectured a pretrained Swin Transformer V2 (T) with a loss-based abstention model, achieving a 96% accuracy in classifying breast cancer Whole Slide Images (WSI) on a private dataset.
     * Enhanced the preprocessing pipeline for WSI pen annotation by implementing bitwise contour methodologies, yielding a 12% enhancement in Dice score.* Created a user-friendly GUI utilizing PyQt5, integrating the automated WSI classification model, and deploying it via Docker for clinical utilization.
+    * https://www.linkedin.com/posts/tesserinc_rtdreeukr-ssqrqrsjy-rhytfmtqauniswmtfeslq-activity-7095235929002414080-1LyX?utm_source=share&utm_medium=member_desktop
 
 
 - layout: left
