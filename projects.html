@@ -14,34 +14,66 @@
 </head>
 
 <body>
-  <header id="page_header">
-    <div class="header_wrap">
-      <div id="blog_name">
-        <a class="blog_title" id="site-name" href="/">Junho Kim</a>
-      </div>
-    <button class="menus_icon">
-      <div class="navicon">
-      </div>
-    </button>
-    <ul class="menus_items">
-
-      <li class="menus_item">
-        <a class="site-page" href="/"> About</a>
-      </li>
-
-      <li class="menus_item">
-        <a class="site-page" href="reviews.html"> Reviews</a>
-      </li>
-
-      <li class="menus_item">
-        <a class="site-page" href="projects.html"> Projects</a>
-      </li>
-
-    </ul>
-    </div>
-  </header>
+    <header id="page_header">
+        <div class="header_wrap">
+          <div id="blog_name">
+            <a class="blog_title" id="site-name" href="/">Junho Kim</a>
+          </div>
+        <button class="menus_icon">
+          <div class="navicon">
+          </div>
+        </button>
+        <ul class="menus_items">
+          <li class="menus_item">
+            <a class="site-page" href="/"> About</a>
+          </li>
+          <li class="menus_item">
+            <a class="site-page" href="reviews.html"> Reviews</a>
+          </li>
+          <li class="menus_item">
+            <a class="site-page" href="projects.html"> Projects</a>
+          </li>
+        </ul>
+        </div>
+      </header>
   
   <main id="page_main">
+    <div class="side-card sticky">
+      <div class="card-wrap" itemscope itemtype="http://schema.org/Person">
+        <div class="author-avatar">
+          <img class="avatar-img" src="/" onerror="this.onerror=null;this.src='/img/profile.png'" alt="avatar">
+        </div>
+        <div class="author-discrip">
+          <h3>Junho Kim</h3>
+          <p class="author-bio">B.S. in Computer Science, B.A in Electrical and Computer Engineering at Rice University</p>
+        </div>
+        <div class="author-links">
+          <button class="btn m-social-links">Links</button>
+          <ul class="social-icons">
+            <li>
+              <a class="social-icon" href="mailto:jk84@rice.edu" target="_blank">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a class="social-icon" href="https://www.linkedin.com/in/jk-junhokim/" target="_blank">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a class="social-icon" href="https://github.com/jk-junhokim" target="_blank">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <a class="cv-links" href="/attaches/CV.pdf" target="_blank">
+          <i class="fas fa-file-pdf" aria-hidden="true">
+            <span>My Detailed CV.</span>
+          </i>
+        </a>
+      </div>
+    </div>
 
     <div class="page" itemscope itemtype="http://schema.org/CreativeWork">
       <article>
@@ -73,6 +105,7 @@
           </ol>
         </div>
       </article>
+
 
       <article>
         <div class="publications">
@@ -155,27 +188,27 @@
       </article>
 
 
-  <div class="nav-wrap">
-    <div class="nav">
-      <button class="site-nav">
-        <div class="navicon"></div>
-      </button>
-      <ul class="nav_items">
-        <li class="nav_item"><a class="nav-page" href="index.html"> About</a></li>
-        <li class="nav_item"><a class="nav-page" href="/#research"> Research</a></li>
-        <li class="nav_item"><a class="nav-page" href="reviews.html"> Reviews</a></li>
-        <li class="nav_item"><a class="nav-page" href="projects.html"> Projects</a></li>
-      </ul>
+    <div class="nav-wrap">
+        <div class="nav">
+            <button class="site-nav">
+                <div class="navicon"></div>
+            </button>
+            <ul class="nav_items">
+                <li class="nav_item"><a class="nav-page" href="/"> About</a></li>
+                <!-- <li class="nav_item"><a class="nav-page" href="/#research"> Research</a></li> -->
+                <li class="nav_item"><a class="nav-page" href="reviews.html"> Reviews</a></li>
+                <li class="nav_item"><a class="nav-page" href="projectshtml"> Projects</a></li>
+            </ul>
+        </div>
+        <div class="cd-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
     </div>
-    <div class="cd-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
-  </div>
 
-<footer id="page_footer">
-  <div class="footer_wrap">
-    <div class="copyright">&copy;2023 by Junho Kim</div>
-    <div class="theme-info">Powered by <a target="_blank" href="https://hexo.io" rel="nofollow noopener">Hexo</a> & <a target="_blank" href="https://github.com/PhosphorW/hexo-theme-academia" rel="nofollow noopener">Academia Theme</a></div>
-  </div>
-</footer>
+    <footer id="page_footer">
+    <div class="footer_wrap">
+        <div class="copyright">&copy;2023 by Junho Kim</div>
+        <div class="theme-info">Powered by <a target="_blank" href="https://hexo.io" rel="nofollow noopener">Hexo</a> & <a target="_blank" href="https://github.com/PhosphorW/hexo-theme-academia" rel="nofollow noopener">Academia Theme</a></div>
+    </div>
+    </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-pjax@latest/jquery.pjax.min.js"></script>
