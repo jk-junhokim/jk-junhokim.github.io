@@ -43,7 +43,7 @@ $(function () {
         $(".header_wrap").removeClass("menus-open").addClass("menus-close")
     })
 
-    // 显示 cdtop
+    // cdtop
     $(document).ready(function ($) {
         var offset = 100,
             scroll_top_duration = 700,
