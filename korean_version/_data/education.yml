@@ -1,0 +1,11 @@
+# 대학교
+- layout: left
+  name: Rice University
+  dates: Augest 2020 ~ May 2025
+  link: https://www.rice.edu/
+  quote: >
+
+  description: | # this will include new lines to allow paragraphs
+    * Major: Computer Science,    Minor: Entrepreneurship
+    * GPA: 3.37 / 4.0
+    * Course Work: Algorithms & Datastructures, Linear Algebra, Object Oriented Programming, Computational Thinking, Probability & Statistics, Practical Machine Learning

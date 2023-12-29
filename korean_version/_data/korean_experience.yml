@@ -1,0 +1,40 @@
+- layout: left
+  company: 마이셀럽스
+  link: https://www.mycelebs.com/
+  job_title: 영어 번역 및 데이터 가공 인턴
+  dates: 2020.02 ~ 2020.06
+  quote: >
+    
+  description: | # this will include new lines to allow paragraphs
+    * 마이크로소프트 액셀을 활용하여 생데이터 가공 및 분류를 진행함
+    * Mycelebs AI Transformation Suite (MATS) 영화 키워드 음성 인식 테스트 진행함
+    * MATS 기반 여행, 영화, 뷰티 서비스 인식을 위한 키워드 및 정보 번역을 함
+
+
+
+- layout: left
+  company: 기초과학연구원
+  link: https://capp.ibs.re.kr/html/capp_kr/
+  job_title: 연구 인턴
+  dates: 2019.06 ~ 2019.09
+  quote: >
+
+  description: | # this will include new lines to allow paragraphs
+     * 초전도 양자 간섭 장치 관련 연구 사례 및 결과 탐구
+     * 샤피로 단계 (Shapiro steps) 를 성공적으로 유도하고 그 과정에서 플랑크 상수를 확인할 수 있는 유익한 데이터를 산출함
+     * 연구 결과를 Center for Physics Precision Axion Dark Matter Search 책에 출판함
+     * 연구 논문 “Basics of Superconducting Quantum Interference Devices (SQUID): SQUID based instrumentation for Axion search and precision physics" 을 작성함
+
+
+
+- layout: left
+  company: TMP Inc.
+  link: 
+  job_title: 비즈니스 팀장
+  dates: 2017.03 ~ 2019.10
+  quote: >
+
+  description: | # this will include new lines to allow paragraphs
+     * 탄자니아에 위한 마세추 중고등학교 (Macechu Secondary School) 를 돕기 위해 수익성 있는 프로젝트를 설계함
+     * 자원봉사자 모집, 재정 문제 관리 및 후원자와 연락을 취함
+     * 비즈니스팀 신입 인터뷰를 진행함

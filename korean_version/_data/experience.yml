@@ -1,0 +1,47 @@
+- layout: left
+  company: Tesser
+  link: https://www.tesser.co.kr/
+  job_title: AI Research Intern
+  dates: May 2023 ~ August 2023
+  quote: >
+    
+  description: | # this will include new lines to allow paragraphs
+    * Architectured a pretrained Swin Transformer V2 (T) with a loss-based abstention model, achieving a 96% accuracy in classifying breast cancer Whole Slide Images (WSI) on a private dataset.
+    * Enhanced the preprocessing pipeline for WSI pen annotation by implementing bitwise contour methodologies, yielding a 12% enhancement in Dice score.* Created a user-friendly GUI utilizing PyQt5, integrating the automated WSI classification model, and deploying it via Docker for clinical utilization.
+    * https://www.linkedin.com/posts/tesserinc_rtdreeukr-ssqrqrsjy-rhytfmtqauniswmtfeslq-activity-7095235929002414080-1LyX?utm_source=share&utm_medium=member_desktop
+
+
+- layout: left
+  company: Republic of Korea Army
+  link: 
+  job_title: Information Radio Transmission Specialist
+  dates: June 2021 ~ December 2022
+  quote: >
+    
+  description: | # this will include new lines to allow paragraphs
+    * Constructed a Microsoft Excel spreadsheet that automated the registration process for wireless radio transmitters.
+    * Skillfully operated the mobile command tower to ensure maintenance and optimal functioning of the radio network.  
+
+
+- layout: left
+  company: MyCelebs Inc
+  link: https://www.mycelebs.com/
+  job_title: Data Analyst
+  dates: February 2020 ~ June 2020
+  quote: >
+    
+  description: | # this will include new lines to allow paragraphs
+    * Developed a text classifier capable of detecting mute letters in input text.
+    * Facilitated effective communication and collaboration among interns while working on multiple ML projects.
+
+
+- layout: left
+  company: Institute for Basic Science
+  link: https://capp.ibs.re.kr/html/capp_kr/
+  job_title: Research Intern
+  dates: June 2019 ~ September 2019
+  quote: >
+
+  description: | # this will include new lines to allow paragraphs
+     * Authored the preprint "Basics of Superconducting Quantum Interference Devices (SQUID): SQUID-based instrumentation for Axion search and precision physics."
+     * Obtained valuable data from SQUID case studies, confirming the Planck constant through induced Shapiro steps.

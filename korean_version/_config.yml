@@ -1,0 +1,70 @@
+# Site
+repository: jk-junhokim/jk-junhokim.github.io
+# favicon: images/favicon.ico
+
+# Personal info
+name: Junho Kim
+title: Computer Science @ Rice University
+email: jk84@rice.edu
+website: https://grinders.tistory.com/
+
+# Dark Mode (true/false/never)
+darkmode: never
+
+# Social links
+github_username:  jk-junhokim
+# stackoverflow_username: "00000001"
+linkedin_username: jk-junhokim
+# orcid_username: 0000-0000-0000-0000
+
+# Additional icon links
+# additional_links:
+# - title: itsgoingto.be
+#   icon: fas fa-globe
+#   url: https://www.itsgoingto.be
+# - title: another link
+#   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&m=free)
+#   url: Link url (eg. https://google.com)
+
+# Google Analytics and Tag Manager
+# Using more than one of these may cause issues with reporting
+# gtm: "GTM-0000000"
+# gtag: "UA-00000000-0"
+# google_analytics: "UA-00000000-0"
+
+# About Section
+# about_title: About Me
+about_profile_image: images/profile.jpeg
+about_content: | # this will include new lines to allow paragraphs
+  <br/><br/>
+  As a computer science major at Rice University, I have undertaken a diverse range of coursework encompassing algorithms, data structures, program design, machine learning, and other mathematically rigorous subjects.<br/><br/>
+  My genuine interest in software engineering and deep learning was cultivated through personal projects that involved convolutional neural networks. In addition, my participation in the Rice 2023 Datathon allowed me to engage with real-world data and apply computational analysis. Throughout the summer of 2023, I experienced exponential growth in my technical skills, including data preprocessing, the construction of ML pipelines, and the design and implementation of neural network models. I have successfully collaborated with diverse teams on projects that required effective communication and cooperation.<br/><br/>
+  Logical thinking, analytical skills, and unwavering commitment to quality are some of my key qualities.<br/><br/>
+  <mark>Technical Skills:<mark/><br/>
+  - Libraries & Frameworks: PyTorch, HuggingFace, OpenCV, Scikit-learn, Pandas <br/>
+  - Tools: MLflow, WandB, Github <br/>
+  - Web & App Dev: Flask, Beautifulsoup, PyQt5 <br/>
+
+
+# Education Section
+# educaton_title: Education
+
+# Projects Section
+# projects_title: Projects
+
+# Experience Section
+# experience_title: Experience
+
+# Footer
+footer_show_references: true
+# references_title: References on request (Override references text)
+
+# Build settings
+remote_theme: sproogen/resume-theme
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+ - jekyll-seo-tag
