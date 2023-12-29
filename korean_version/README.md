@@ -1,3 +1,3 @@
-# 이력서 / Resume
+# Resume
 
-* [템플릿/template] (https://github.com/sproogen/modern-resume-theme)
+* [Template] (https://github.com/sproogen/modern-resume-theme)
