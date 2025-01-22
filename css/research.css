@@ -1,0 +1,146 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #555;
+    --accent-color: #814dd4;
+    --background-color: #f9f4e8;
+    --muted-color: #888;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.header nav {
+    display: flex;
+    gap: 15px;
+}
+
+.header a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.header a.active {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Research Title */
+.research-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: left;
+}
+
+/* Research Section */
+.research-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Research Item */
+.research-item {
+    background-color: #f9f4e8;
+    /* Light beige for box */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Flex container for text + image side-by-side */
+.research-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* Text side can occupy most of the width */
+.research-text {
+    flex: 1;
+}
+
+/* Ensure image fits nicely and has spacing from the text */
+.research-image img {
+    max-width: 250px;
+    height: auto;
+    margin-left: 20px;
+}
+
+.research-item h3 {
+    font-size: 1.2rem;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.research-item p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.research-links {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.research-links a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.research-links a:hover {
+    text-decoration: underline;
+}
+
+.disabled-link {
+    color: gray;
+    /* Make text gray */
+    pointer-events: none;
+    /* Disable click events */
+    text-decoration: none;
+    /* Remove underline if desired */
+    opacity: 0.6;
+    /* Slightly faded appearance */
+    cursor: default;
+    /* Cursor won’t show a pointer hand */
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+}

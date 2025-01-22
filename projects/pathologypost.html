@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Post - Junho Kim</title>
+  <link rel="stylesheet" href="../css/blog-post.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Junho Kim</h1>
+      <nav>
+        <a href="../index.html">About</a>
+        <a href="../research.html" class="active">Research</a>
+        <a href="../blog.html">Blog</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="blog-post">
+        <h2 class="blog-title">Detecting and Classifying Breast Cancer through Whole Slide Images</h2>
+        <p class="blog-date">June, 2023</p>
+        
+        <h3>The Project</h3>
+        <p>
+            Our team worked on a project to use artificial intelligence to detect high-purity tumor areas in breast pathology and verify their performance in real clinical settings.
+            In this project, we aimed to more accurately identify tumor areas within pathological tissue slides by utilizing artificial intelligence technologies, including deep learning.
+            Pathologic tissue slides vary greatly in the data due to differences in the staining process, types and settings of scanners. Developing an artificial intelligence model that shows consistent performance even under these various conditions has been an important challenge.
+            Our goal is to assist pathologists in making faster and more accurate diagnoses in clinical settings through these models. This process is expected to make an important contribution not only to the advancement of medical AI technology, but also to patient diagnosis and treatment.
+            To this end, we have developed a user-friendly graphical user interface (GUI) program to facilitate the use of artificial intelligence models by pathologists in clinical settings. This GUI program is designed to allow pathologists to analyze data and interpret results intuitively without being complicated, and it aims to contribute to enhancing the accuracy and efficiency of pathological analysis and simplifying the diagnostic process.
+            Breast cancer is one of the most common cancers in women worldwide, and early diagnosis and the development of effective treatment methods are very important. In this context, pathological analysis plays a pivotal role in the diagnosis and treatment of breast cancer. This analysis, primarily through pathologic tissue slides, is essential for evaluating the nature and stage of the tumor.
+            In recent years, artificial intelligence, especially deep learning technology, has made significant advances in the field of medical image analysis. These technologies have contributed greatly to the detection and analysis of cancer cells on pathological tissue slides. It has played an important role in enabling accurate and rapid diagnosis by assisting pathologists in their work.
+            However, the main challenge encountered in this project was the diversity of the pathological tissue slide data. Various staining methods, concentrations, types and settings of scanners made the characteristics of the data different. This diversity of data has made it difficult for AI models to maintain consistent accuracy. In response, our team focused on designing and optimizing robust models taking this diversity into account.
+            Based on the above background, our team worked on the project with the aim of an artificial intelligence model that accurately detects high-purity tumor areas in breast pathology.
+            Breast Pathology Tissue Slide Data is a tissue sample that is pathologically examined for the diagnosis of breast cancer. The sample is finely cut and placed on a glass slide, allowing the staining process to distinguish between cancer cells and normal cells.
+            Tissue slides are converted into digital images, where the characteristics of the data are revealed. Digital slides have a pyramid structure that includes various magnification levels, allowing for detailed analysis of high-resolution whole images to smaller areas. This data is used to determine the type, size, and growth pattern of breast cancer, and plays an important role in establishing an accurate diagnosis and treatment plan.            
+        </p>
+
+        <h3>Why I Joined</h3>
+        <p>
+          The motivation behind this project was pretty simple: I wanted to quench my thirst for research that directly impacts society. Previously, I worked on biomedical research aimed at developing a deployable product for breast cancer detection. It’s an incredible and important field, with groundbreaking work happening in places like the <a href="https://faisal.ai/" target="_blank">Mahmood Lab</a>. But it’s also a <i>popular</i> area, with abundant resources and brilliant minds already driving innovation. This time, I wanted to step into a less crowded, often overlooked space—something deeply connected to the community, where computer scientists are needed but resources are scarce. That’s how I found my way to IDRT. The project checked all the boxes: impactful, community-focused, and aligned with my skills. So, I reached out, and soon enough, I was on board as a research intern for the semester. It felt like the perfect way to bridge research and real-world community needs. I truly believe research exists to benefit humanity. But let’s face it—many great ideas don’t make it past a published paper or a GitHub repo. They often lose their community-driven purpose somewhere along the way. This project was different. By working within an institute like IDRT and leveraging a community-driven database, I felt like I was taking my first step—not just as a researcher, but as someone genuinely contributing to the community. It was my way of giving back and making sure that the work we do in research finds its way back to the people who need it most.
+        </p>
+
+        <h3>What information can I get from a breast pathology tissue slide?</h3>
+        <p>
+            The information available from the breast pathology tissue slides is very extensive. This data is first used to determine the presence or absence of breast cancer and to identify the type of cancer.
+            We worked on the project around the following processes to accurately segment the tumor area on the breast histopathology slide.
+        </p>
+
+        <h3>Development of AI-based tumor detection models and GUI programs</h3>
+        <p>
+            We focused on the development of artificial intelligence models and user-friendly GUI programs to accurately segment and analyze tumor areas on breast histopathology slides, and adopted data processing and learning methods essential for identifying the presence and type of breast cancer. The developed GUI program is designed to make it easier for pathologists to understand and utilize analysis results. Through this, it was possible to quickly check the tumor area of a large amount of pathology slides and drastically reduce the time required for sample analysis. In addition, by showing the area derived from artificial intelligence on the GUI, consistent results can be received. This has the advantage of increasing the reliability and reproducibility of the analysis results.
+        </p>
+
+        <h3>Types of Breast Cancer</h3>
+        <p>
+            There are many different types of breast cancer that can be identified on the breast histopathology slide. The main types include IDC (Invasive Pile Cancer), DCIS (Non-Invasive Pile Cancer), ILC (Invasive Pile Cancer), and LCIS (Non-Invasive Pile Cancer). In this project, we focused on developing an artificial intelligence model that combines these different types of breast cancer into one class and identifies a wide range of tumor areas in the early stages.
+            AI model learning and optimization were conducted in the following process.
+            To solve the class imbalance problem, where non-tumor patches account for the majority of non-tumor patches, control tumor/non-tumor patch ratios to progress model learning that is efficient for tumor detection. Develop a patch-based deep learning model that uses SOTA models to detect tumors in pathology slides. Five model tests with 5-fold cross-validation to create a more generalized model. Hyperparameter tuning process to prevent model optimization and overfitting. In addition, we developed an artificial intelligence model that accurately detects high-purity tumor areas by applying sliding window inference and small area filter algorithms in the above process. We used a 5-fold cross-validation method to improve the generalization performance of the model. Through this approach, the dataset was divided into 5-folds, and five training and validation were performed on the same model structure.
+            The model we learned was evaluated using an external dataset and achieved impressive accuracy in each fold, and the results are as follows.
+            Fold 0: 0.9532
+            Fold 1: 0.9518
+            Fold 2: 0.9513
+            Fold 3: 0.9506
+            Fold 4: 0.9498
+
+            Based on these results, the average F1 score of these five models was over 0.95. This shows that the model has a high level of performance and consistency.
+            The Tumor Confidence Control feature allows the user to select the desired level of tumor confidence:
+            'Soft' displays more than 50% of the tumor area.
+            'Modernate' displays more than 70% of the tumor area.
+            'Hard' shows only 90% or more of the tumor area.
+            In addition, users can use the ability to generate detailed analysis reports and data sheets based on tumor inference results, allowing them to systematically document diagnostic information and share it as needed.
+        </p>
+
+        <h3>Wrapping it up</h3>
+        <p>
+            Through this project, our team developed an artificial intelligence model and GUI program to increase the accuracy and efficiency of breast cancer diagnosis. These technologies will greatly help medical professionals make faster and more accurate diagnoses.
+            Without a high-cost, high-resolution microscope, pathology slides can be analyzed quickly in a variety of clinical settings, not only increasing the efficiency of pathology testing, but also allowing large-scale data to be continuously built through quantitative measurements.
+            These data can be combined with a variety of other medical data (blood tests, genetic tests, unstructured text extraction information, CT/MRI quantitative analysis information, etc.) to attempt integrated modeling on a broader set of data. This allows us to take a step closer to personalized medication and precision medication approaches in treatment decisions along with accurate prognosis predictions.
+            The changes that artificial intelligence technology will bring to the medical field are huge and the potential for the future is infinite. It is expected that the R&D team and all team members will grow and develop together in shaping the future of medical AI.
+        </p>
+
+        <h3>Korean Project Version</h3>
+        <p>
+          <a href="https://medium.com/tesser-team/%EB%B3%91%EB%A6%AC-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%A2%85%EC%96%91-%ED%83%90%EC%A7%80-ai-%EB%AA%A8%EB%8D%B8-%EA%B0%9C%EB%B0%9C-142e60b51a70" target="_blank">Medium Blog</a>
+        </p>
+
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2024 Junho Kim</p>
+    </footer>
+  </div>
+</body>
+</html>

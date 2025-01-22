@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Post - Junho Kim</title>
+  <link rel="stylesheet" href="../css/blog-post.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Junho Kim</h1>
+      <nav>
+        <a href="../index.html">About</a>
+        <a href="../research.html">Research</a>
+        <a href="../blog.html" class="active">Blog</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="blog-post">
+        <h2 class="blog-title">From Lab to Community: Research Where It Matters Most</h2>
+        <p class="blog-date">December, 2024</p>
+
+        <h3>The Project</h3>
+        <p>
+          For the past few months, I’ve had the opportunity to work as a visiting research intern at <a
+            href="https://idrt.tamug.edu/" target="_blank">The Institute for a Disaster Resilient Texas (IDRT)</a>,
+          affiliated with The Texas A&M University. My project was about improving object geolocation for post-disaster
+          management. Basically, I worked with computer vision algorithms and math formulas to make sure building
+          coordinates are as accurate as possible—something that’s super important when every second counts during
+          disaster recovery and management.
+        </p>
+
+        <h3>Why I Joined</h3>
+        <p>
+          The motivation behind this project was pretty simple: I wanted to quench my thirst for research that directly
+          impacts society. Previously, I worked on biomedical research aimed at developing a deployable product for
+          breast cancer detection. It’s an incredible and important field, with groundbreaking work happening in places
+          like the <a href="https://faisal.ai/" target="_blank">Mahmood Lab</a>. But it’s also a <i>popular</i> area,
+          with abundant resources and brilliant minds already driving innovation. This time, I wanted to step into a
+          less crowded, often overlooked space—something deeply connected to the community, where computer scientists
+          are needed but resources are scarce. That’s how I found my way to IDRT. The project checked all the boxes:
+          impactful, community-focused, and aligned with my skills. So, I reached out, and soon enough, I was on board
+          as a research intern for the semester. It felt like the perfect way to bridge research and real-world
+          community needs. I truly believe research exists to benefit humanity. But let’s face it—many great ideas don’t
+          make it past a published paper or a GitHub repo. They often lose their community-driven purpose somewhere
+          along the way. This project was different. By working within an institute like IDRT and leveraging a
+          community-driven database, I felt like I was taking my first step—not just as a researcher, but as someone
+          genuinely contributing to the community. It was my way of giving back and making sure that the work we do in
+          research finds its way back to the people who need it most.
+        </p>
+
+        <h3>How it's going</h3>
+        <p>
+          I oversaw most of the technical aspects of this project. The technical workflow can be divided into three major components:
+        </p>
+        <p class="center-text">
+          Data Collection → Building Detection → Image Retrieval
+        </p>
+        <p>
+          I focused on fine-tuning the object detection model for identifying damaged buildings and applying image similarity models for efficient image retrieval. As demonstrated in <a href="https://arxiv.org/abs/2410.10817" target="_blank">[1]</a>, vision models can be effectively used as similarity metrics. Trained vision models can serve either as loss functions for training new networks requiring specific perceptual similarity or as standalone similarity metrics. In our research, we utilized vision models as off-the-shelf similarity metrics to embed the original images and conduct image retrieval based on the embedded representations. We used the post-disaster building dataset, referred to as the <a href="https://apps.dat.noaa.gov/stormdamage/damageviewer/" target="_blank">NOAA database</a>, as the query dataset, and Google Street View images with accurate geolocation information as the target dataset.
+        </p>
+
+        <h3>Results and Experiments</h3>
+        <p>
+          Results so far indicate high performance in building detection. For fine-tuning, I used the dataset presented in <a href="https://ieeexplore.ieee.org/abstract/document/9380541a" target="_blank">[2]</a>. Figure [1] illustrates the performance comparison, highlighting improvements in average precision and detection rates after fine-tuning. Figure [2] shows the detection rates for the query and target datasets.
+        </p>
+
+        <figure>
+          <img src="../assets/blog/images/blog1/ap_curve.png" alt="AP Curve">
+          <figcaption>Figure 1: Performance comparison for building detection</figcaption>
+        </figure>
+        
+        <figure>
+          <img src="../assets/blog/images/blog1/detection_rate.png" alt="Detection Rate">
+          <figcaption>Figure 2: Detection Rate</figcaption>
+        </figure>
+
+        <p>
+          Regarding image retrieval, we are experimenting with four different models. Among them, I am currently testing <a href="https://github.com/facebookresearch/dino" target="_blank">DINO [3]</a> and <a href="https://dreamsim-nights.github.io/" target="_blank">DreamSim [4]</a>. The final results will be presented in our upcoming paper.
+        </p>
+
+        <h3>References</h3>
+      <section class="references">
+          <p>
+              [1] Sundaram, Shobhita, et al. "When Does Perceptual Alignment Benefit Vision Representations?." arXiv preprint arXiv:2410.10817 (2024).
+          </p>
+          <p>
+              [2] Zhao, Kun, et al. "Bounding boxes are all we need: street view image classification via context encoding of detected buildings." IEEE Transactions on Geoscience and Remote Sensing 60 (2021): 1-17.
+          </p>
+          <p>
+              [3] Caron, Mathilde, et al. "Emerging properties in self-supervised vision transformers." Proceedings of the IEEE/CVF international conference on computer vision. 2021.
+          </p>
+          <p>
+              [4] Fu, Stephanie, et al. "Dreamsim: Learning new dimensions of human visual similarity using synthetic data." arXiv preprint arXiv:2306.09344 (2023).
+          </p>
+      </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2024 Junho Kim</p>
+    </footer>
+    
+  </div>
+</body>
+
+</html>

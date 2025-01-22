@@ -1,0 +1,129 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #555;
+    --accent-color: #814dd4;
+    --background-color: #f9f4e8;
+    --muted-color: #888;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.header nav {
+    display: flex;
+    gap: 15px;
+}
+
+.header a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.header a.active {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Research Post */
+.research-post {
+    margin-top: 20px;
+}
+
+.research-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.research-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.research-post p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.research-post h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    color: #333;
+}
+
+.research-post ul,
+.research-post ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* Text-Image Layouts */
+.text-image-horizontal {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.text-image-horizontal .text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.text-image-horizontal .image {
+    flex: 1;
+}
+
+.text-image-horizontal img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.text-image-vertical {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.text-image-vertical img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+}

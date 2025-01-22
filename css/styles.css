@@ -1,0 +1,149 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #555;
+    --accent-color: #0f31ad;
+    --background-color: #f9f4e8;
+    --muted-color: #888;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.header nav {
+    display: flex;
+    gap: 15px;
+}
+
+.header a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.header a.active {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Card Styling for Sections */
+.card {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* max-width: 780px; */
+    margin-bottom: 20px;
+}
+
+/* Profile Section */
+.about-section .profile-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+}
+
+.about-text {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.about-text a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* Education & Experience Section */
+.edu-exp-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* .edu-exp-section ul {
+    list-style: disc;
+    padding-left: 20px;
+} */
+
+.edu-exp-section ul {
+    list-style-type: disc; /* Ensure bullet points */
+    padding-left: 40px;    /* Indent the bullets as you prefer */
+}
+
+
+h2 {
+    margin-top: 0;
+}
+
+ul li {
+    margin-bottom: 20px; 
+}
+
+ul li strong {
+    font-size: 17px;
+}
+
+ul li strong,
+ul li span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+ul li .details {
+    margin-left: 20px;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+ul li .years {
+    display: block;
+    color: var(--muted-color);
+    font-style: italic;
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+}

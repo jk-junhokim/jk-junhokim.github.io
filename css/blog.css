@@ -1,0 +1,108 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #555;
+    --accent-color: #814dd4;
+    --background-color: #f9f4e8;
+    --muted-color: #888;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.header nav {
+    display: flex;
+    gap: 15px;
+}
+
+.header a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.header a.active {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Blog Section */
+.blog-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: left;
+}
+
+.blog-list {
+    list-style: none;
+    padding: 0;
+    counter-reset: blog-counter; /* Reset counter for reversed numbering */
+}
+
+.blog-list li {
+    counter-increment: blog-counter; /* Increment counter */
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.blog-list li::before {
+    content: "#" counter(blog-counter); /* Add counter with hashtag */
+    font-weight: bold;
+    margin-right: 10px;
+    color: #333;
+}
+
+.blog-list a {
+    text-decoration: underline;
+    color: #000000;
+    font-weight: bold;
+}
+
+.blog-list a:hover {
+    color: #960acd;
+}
+
+/* Footer */
+.footer {
+    position: fixed; /* Fix the footer to the bottom */
+    bottom: 0;       /* Align to the bottom of the viewport */
+    left: 0;         /* Align to the left of the viewport */
+    width: 100%;     /* Ensure the footer spans the entire width */
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    /* background-color: var(--background-color); Optional for better visibility */
+    padding: 10px 0; /* Add some padding for aesthetics */
+    /* box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); Optional shadow for visual separation */
+}
+/* .footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+} */

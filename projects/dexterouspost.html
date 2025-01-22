@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Post - Junho Kim</title>
+    <link rel="stylesheet" href="../css/research-post.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Junho Kim</h1>
+            <nav>
+                <a href="../index.html">About</a>
+                <a href="../research.html" class="active">Research</a>
+                <a href="../blog.html">Blog</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="research-post">
+                <h2 class="research-title">Evaluating Optimization-Based Dexterous Functional Grasping</h2>
+                <p class="research-date">October, 2024</p>
+
+                <article>
+                    <h3>Proposal</h3>
+                    <p>
+                        Achieving single-hand squeezing motions for articulated objects is a complex and intriguing
+                        challenge. Articulated objects, such as pliers, clips, spray bottles, and similar tools,
+                        typically involve two primary modes of interaction. The first mode is grasping the object for
+                        basic tasks, like picking it up. The second, and the focus of this work, is functional
+                        grasping—grasping and using the object as intended.
+                    </p>
+                    <p>While extensive research has been conducted on grasping objects for pick-and-place tasks, much
+                        less attention has been given to functional grasping. This process requires robotic hands to
+                        align with an object’s design and intended use, often involving in-object rotations,
+                        translations, or specific trajectories. For instance, pliers require a rotational motion about a
+                        fixed axis, while a lotion bottle’s dispenser operates along a translational prismatic axis.
+                        Traditional pick-and-place techniques fail to address such functional requirements, motivating
+                        our investigation into dexterous functional grasping.
+                    </p>
+                    <div class="text-image-vertical">
+                        <img src="../images/research/iprl_project_page/object_categorization.png" alt="Proposal image">
+                    </div>
+
+                    <h3>Project Scope</h3>
+                    <p>
+                        This study focuses on objects with rotational or translational degrees of freedom, such as
+                        pliers, wire snippers, spray bottles, drills, tweezers, scissors, and lotion bottles. These
+                        objects share key characteristics, including multiple affordances, revolute or prismatic joints,
+                        and functional graspability.
+                    </p>
+                    <p>
+                        We utilized a <strong>KUKA robotic arm</strong> paired with an <strong>Allegro hand </strong>to
+                        achieve functional grasps that enable these objects to perform their intended tasks.
+                    </p>
+
+
+                    <h3>Approach</h3>
+                    <h4>Functional Grasping Stages</h4>
+                    <p>Functional grasping can be divided into two main stages:</p>
+                    <p><strong>Grasping the Object:</strong></p>
+                    <ul>
+                        <li>The grasp must be stable, allowing the object to be picked up without slipping or shifting.
+                        </li>
+                        <li>The grasp must align with the object’s functionality, enabling immediate use without
+                            requiring additional in-hand manipulation.</li>
+                    </ul>
+                    <div class="text-image-vertical">
+                        <img src="../images/research/iprl_project_page/experiment_setup.png" alt="Grasping example">
+                    </div>
+                    <h4>Using the Object (Post-Trajectory Manipulation)</h4>
+                    <div class="text-image-horizontal">
+                        <div class="text">
+                            <p>
+                                Once the object is grasped, it must be manipulated along its functional trajectory. This
+                                stage is particularly challenging due to the complexity of articulated motion. To
+                                address this, we explored methods using fingertip force sensors and video-based visual
+                                learning.
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="../images/research/iprl_project_page/pointcloud_generation.png"
+                                alt="Post-trajectory manipulation">
+                        </div>
+                    </div>
+
+                    <h3>Methodology</h3>
+                    <p>
+                        The primary challenge lies in establishing robust functional grasps. Our goal was to build an
+                        end-to-end pipeline for grasping and using objects. To do this, we integrated recent
+                        advancements in grasping techniques.
+                    </p>
+
+                    <h4>SpringGrasp for Robust Grasp Synthesis</h4>
+                    <p>
+                        We used <strong>SpringGrasp</strong>, an optimization-based approach that generates robust
+                        grasps from 3D point clouds, as the foundation for the first stage. While effective for stable
+                        grasping, SpringGrasp does not account for object articulation or functional trajectories.
+                    </p>
+                    <!-- <div class="text-image-vertical">
+                <img src="../images/research/iprl_project_page/" alt="SpringGrasp illustration">
+            </div> -->
+
+                    <h4>AffCorrs for Affordance Integration</h4>
+                    <p>
+                        To address this limitation, we incorporated the <strong>AffCorrs</strong> method, which combines
+                        affordance detection with robust grasping to ensure functionality. AffCorrs predicts affordance
+                        regions on objects, providing insights into where the object should be grasped to enable its
+                        intended function.
+                    </p>
+                    <div class="text-image-horizontal">
+                        <div class="text">
+                            <p>
+                                SpringGrasp typically suggests multiple grasping options (5–8 scenarios), many of which
+                                may not consider an object’s revolute or prismatic joints. To refine these options, we
+                                introduced <strong>multi-affordance mask alignment</strong>, complemented by metrics
+                                such as Intersection over Union (IoU) and Chamfer Distance, to evaluate grasp
+                                functionality.
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="../images/research/iprl_project_page/contact_rate.png" alt="AffCorrs method">
+                        </div>
+                    </div>
+
+                    <h4>Central Question</h4>
+                    <p>
+                        Our primary question was: <strong>“Is it a functional grasp?”</strong>
+                    </p>
+                    <p>
+                        This question is critical because the object must be appropriately grasped before progressing to
+                        robot learning methods for manipulation. Previous work, such as that by Agarwal et al.,
+                        demonstrated functional grasping for objects like hammers, drills, screwdrivers, and spray
+                        bottles. However, a closer analysis of example videos reveals functional shortcomings,
+                        particularly for drills and spray bottles, where specific finger placements are essential. This
+                        highlights the importance of robust and precise grasp evaluation.
+                    </p>
+
+                    <p>
+                        In our work, the focus was on using affordance detection and optimization-based methods to
+                        finalize a functional grasp. My contribution primarily involved working in the 3D point cloud
+                        space to visualize and enhance proposed grasps.
+                    </p>
+                    <div class="text-image-vertical">
+                        <img src="../images/research/iprl_project_page/contact_rate.png"
+                            alt="3D Point Cloud visualization">
+                    </div>
+
+
+                    <h3>Pipeline</h3>
+                    <ol>
+                        <li><strong>3D Object Reconstruction:</strong> We used a stereo camera to capture partial 3D
+                            point clouds of objects, providing a detailed spatial representation.</li>
+                        <li><strong>Affordance Prediction with DINO V2:</strong> Using DINO V2, we generalized
+                            affordance predictions to identify regions suitable for grasping. This method achieved a
+                            promising accuracy of approximately 60%.</li>
+                        <li><strong>Grasp Generation and Evaluation:</strong> We fed this data into the SpringGrasp
+                            model to generate stable grasps, which were then evaluated using multi-affordance alignment
+                            metrics. This allowed us to predict functional grasps without physical execution.</li>
+                    </ol>
+                    <div class="text-image-horizontal">
+                        <div class="text">
+                            <p>
+                                We fed this data into the SpringGrasp model to generate stable grasps, which were then
+                                evaluated using multi-affordance alignment metrics. This allowed us to predict
+                                functional grasps without physical execution.
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="../images/research/iprl_project_page/pointcloud_generation.png"
+                                alt="Evaluation process">
+                        </div>
+                    </div>
+                    <p>
+                        Results showed a strong correlation between 2D and 3D affordance generalization accuracy. We
+                        tracked the success of our multi-affordance alignment method by comparing the robot’s grasps to
+                        the correct affordance regions.
+                    </p>
+
+                    <h3>Limitations and Future Work</h3>
+                    <div class="text-image-horizontal">
+                        <div class="image">
+                            <img src="../images/research/iprl_project_page/isaacgym_plier.png"
+                                alt="Limitations illustration">
+                        </div>
+                        <div class="text">
+                            <p>
+                                Our initial plan included exploring both imitation learning and reinforcement learning
+                                methods. However, collecting demonstrations for imitation learning proved challenging.
+                                For instance, 3D-printed pliers scaled to the Allegro hand posed significant
+                                difficulties for demonstration collection.
+                            </p>
+                            <p>
+                                Moving forward, we plan to:
+                            </p>
+                            <ul>
+                                <li>Enhance demonstration collection techniques for articulated objects.</li>
+                                <li>Expand the range of objects studied to improve generalization.</li>
+                                <li>Investigate reinforcement learning approaches to optimize functional grasping
+                                    trajectories.</li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <h3>Reflections</h3>
+                    <p>
+                        The human body is an incredible machine, capable of solving physical problems with ease.
+                        Robotics, however, still lags behind in generalizing physical actions and problem-solving. My
+                        project falls under the domain of dexterous manipulation, a field that includes recent works on
+                        spinning pens, object grasping based on geometry, and the development of task-specific robotic
+                        hands.
+                        I believe that effective manipulation of an object heavily depends on the quality of the grasp.
+                        Unless significant advancements are made in in-hand manipulation (adjusting an object’s position
+                        post-grasp), grasping will remain a bottleneck for robotic functionality.
+                    </p>
+                    <p>
+                        Reinforcement learning, while promising, is difficult to apply to dexterous manipulation.
+                        Designing effective reward functions is complex, and policies often require extensive tuning.
+                        Despite these challenges, reinforcement learning has shown the potential to outperform humans in
+                        specific areas, offering exciting possibilities for the future.
+                    </p>
+                    <div class="text-image-vertical">
+                        <img src="../images/research/iprl_project_page/evaluation_results.png"
+                            alt="Reflection on robotics">
+                    </div>
+                    <div class="text-image-vertical">
+                        <img src="../images/research/iprl_project_page/contact_rate_eq.png"
+                            alt="Reflection on robotics">
+                    </div>
+                    <div class="text-image-vertical">
+                        <img src="../images/research/iprl_project_page/rl_overview.png" alt="Reflection on robotics">
+                    </div>
+                    <div class="text-image-vertical">
+                        <img src="../images/research/iprl_project_page/rl_layout.png" alt="Reflection on robotics">
+                    </div>
+
+                    <h3>References</h3>
+                    <ul>
+                        <li>Chen, Sirui, Jeannette Bohg, and C. Karen Liu. "SpringGrasp: An optimization pipeline for
+                            robust and compliant dexterous pre-grasp synthesis." <i>arXiv preprint arXiv:2404.13532</i>
+                            (2024).</li>
+                        <li>Hadjivelichkov, Denis, et al. "One-shot transfer of affordance regions? AffCorrs!"
+                            <i>Conference on Robot Learning.</i> PMLR, 2023.</li>
+                        <li>Wang, Jun, et al. "Lessons from Learning to Spin Pens." <i>arXiv preprint
+                                arXiv:2407.18902</i> (2024).</li>
+                        <li>Agarwal, Ananye, et al. "Dexterous functional grasping." 7th Annual Conference on Robot
+                            Learning. 2023.</li>
+                        <li>Katz, Dov. Interactive perception of articulated objects for autonomous manipulation.
+                            University of Massachusetts Amherst, 2011.</li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Junho Kim</p>
+        </footer>
+    </div>
+</body>
+
+</html>
