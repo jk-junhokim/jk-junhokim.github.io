@@ -4,11 +4,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
-    color: #333;
+    color: #000000;
+    line-height: 1.7;
 }
 
 :root {
-    --primary-color: #0056b3;
+    --primary-color: #007bff;
     --secondary-color: #555;
     --accent-color: #814dd4;
     --background-color: #f9f4e8;
@@ -19,6 +20,10 @@ body {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
+}
+
+p {
+    text-align: justify;
 }
 
 /* Header */
@@ -55,27 +60,27 @@ body {
 }
 
 .research-title {
-    font-size: 2rem;
+    font-size: 32px;
     margin-bottom: 10px;
-    color: #333;
+    color: #000000;
 }
 
 .research-date {
-    font-size: 0.9rem;
+    font-size: 12px;
     color: #888;
     margin-bottom: 20px;
 }
 
 .research-post p {
     margin-bottom: 20px;
-    font-size: 1rem;
+    font-size: 17px;
 }
 
 .research-post h3 {
-    font-size: 1.4rem;
+    font-size: 22px;
     margin-bottom: 10px;
     margin-top: 30px;
-    color: #333;
+    color: #000000;
 }
 
 .research-post ul,
@@ -84,28 +89,97 @@ body {
     margin-bottom: 20px;
 }
 
+
+/* Image Layouts */
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers both image and caption */
+    justify-content: center;
+}
+.image-container img {
+    width: 400px;
+    height: auto;
+    border-radius: 5px;
+}
+.image-container figcaption {
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+    margin-top: 5px;
+    color: #555;
+}
+
+
+.experiment-setup {
+    display: flex;
+    align-items: center; /* Aligns text and image vertically */
+    justify-content: space-between; /* Distributes space between elements */
+    gap: 20px; /* Adds spacing between text and image */
+}
+
+.experiment-setup .text {
+    flex: 1; /* Allows text to take available space */
+    text-align: justify; /* Justifies text */
+}
+
+.experiment-setup .image-container {
+    flex-shrink: 0; /* Prevents image from shrinking */
+    max-width: 300px; /* Ensures image maintains its original size */
+}
+
+.experiment-setup img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+ul.no-bullets {
+    list-style-type: none; /* Removes default bullet points */
+    padding-left: 0; /* Removes default indentation */
+}
+
+ul.no-bullets li {
+    margin-bottom: 5px; /* Adds spacing between list items for readability */
+}
+
+
+
+
+
+
 /* Text-Image Layouts */
 .text-image-horizontal {
     display: flex;
-    align-items: center;
-    margin: 20px 0;
+    align-items: flex-start;
+    gap: 20px; /* Adds spacing between text and images */
 }
 
+/* Ensures the text takes up space and is properly aligned */
 .text-image-horizontal .text {
     flex: 1;
     padding-right: 20px;
+    text-align: justify;
 }
 
-.text-image-horizontal .image {
+/* New container for stacking images vertically */
+.image-container-vertical {
+    display: flex;
+    flex-direction: column; /* Stacks images vertically */
+    align-items: center; /* Centers the images */
     flex: 1;
 }
 
-.text-image-horizontal img {
+/* Styling for images */
+.image-container img {
     max-width: 100%;
     height: auto;
     display: block;
     border-radius: 5px;
+    margin-bottom: 10px; /* Adds spacing between stacked images */
 }
+
 
 .text-image-vertical {
     text-align: center;
@@ -120,10 +194,20 @@ body {
     border-radius: 5px;
 }
 
-/* Footer */
+
+/* References */
+.references p {
+    font-size: 12px; /* Smaller font size */
+    font-style: italic; /* Italicize the text */
+    margin-bottom: 10px;
+}
+
 .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 40px;
-    text-align: center;
-    font-size: 0.9rem;
+    font-size: 12px;
     color: #777;
+    text-align: center;
 }

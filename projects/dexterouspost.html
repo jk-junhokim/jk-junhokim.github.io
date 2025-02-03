@@ -21,237 +21,307 @@
 
         <main>
             <section class="research-post">
-                <h2 class="research-title">Evaluating Optimization-Based Dexterous Functional Grasping</h2>
+                <h2 class="research-title">Evaluating Optimization-Based Functional Grasping</h2>
                 <p class="research-date">October, 2024</p>
 
                 <article>
-                    <h3>Proposal</h3>
+                    <h3>Background & Motivation</h3>
                     <p>
-                        Achieving single-hand squeezing motions for articulated objects is a complex and intriguing
-                        challenge. Articulated objects, such as pliers, clips, spray bottles, and similar tools,
-                        typically involve two primary modes of interaction. The first mode is grasping the object for
-                        basic tasks, like picking it up. The second, and the focus of this work, is functional
-                        grasping—grasping and using the object as intended.
+                        Achieving single-handed squeezing motions for articulated objects presents a complex challenge, as the grasping strategy is highly dependent on the object's type and functionality. Generic objects, such as rigid cylinders or rubber balls, do not require precise finger coordination and are primarily involved in pick-and-place tasks, where a firm grasp is sufficient. In contrast, articulated objects, including pliers, clips, and spray bottles, demand more sophisticated grasping strategies. These objects can be handled in two distinct modes: <b>(1) Basic grasping</b>, where the objective is simply to securely lift and place the object, and <b>(2) Functional grasping</b>, which involves not only holding the object firmly but also manipulating it to perform its intended function. Functional grasping requires coordinated hand-object interactions, making it a significantly more complex task in robotic manipulation.
                     </p>
-                    <p>While extensive research has been conducted on grasping objects for pick-and-place tasks, much
-                        less attention has been given to functional grasping. This process requires robotic hands to
-                        align with an object’s design and intended use, often involving in-object rotations,
-                        translations, or specific trajectories. For instance, pliers require a rotational motion about a
-                        fixed axis, while a lotion bottle’s dispenser operates along a translational prismatic axis.
-                        Traditional pick-and-place techniques fail to address such functional requirements, motivating
-                        our investigation into dexterous functional grasping.
+                    <p>
+                        While extensive research has been conducted on grasping objects [1] for pick-and-place tasks [2][3], functional grasping presents a significantly greater challenge. This task requires robotic grippers to align with an object's design and intended use, often necessitating in-object rotations, translations, or specific trajectories. More generally, it involves understanding the object's purpose and its physical constraints. For instance, pliers require a rotational motion about a fixed axis, while a lotion bottle dispenser operates along a translational axis. Traditional pick-and-place techniques fail to accommodate these functional requirements, underscoring the need for dedicated exploration of functional grasping for articulated objects.
                     </p>
-                    <div class="text-image-vertical">
-                        <img src="../images/research/iprl_project_page/object_categorization.png" alt="Proposal image">
-                    </div>
+
+
+                    <figure class="image-container">
+                        <img src="../images/research/iprl_project_page/1_object_categorization.png" style="width: 400px; height: 350px;">
+                        <figcaption>Figure 1: Categorization for multi-affordance and object articulation.</figcaption>
+                    </figure>
+                    
 
                     <h3>Project Scope</h3>
                     <p>
-                        This study focuses on objects with rotational or translational degrees of freedom, such as
-                        pliers, wire snippers, spray bottles, drills, tweezers, scissors, and lotion bottles. These
-                        objects share key characteristics, including multiple affordances, revolute or prismatic joints,
-                        and functional graspability.
+                        This study focuses on objects with either rotational or translational axes, including 
+                        pliers, wire snippers, spray bottles, drills, tweezers, scissors, and lotion bottles. 
+                        These objects exhibit key characteristics such as multiple affordances, revolute or 
+                        prismatic joints, and, most critically, functional utility. Unlike conventional 
+                        pick-and-place tasks, our objective extends beyond stable grasping to achieving 
+                        <b>precision grasps</b> that enable the robot to effectively utilize the object.
                     </p>
                     <p>
-                        We utilized a <strong>KUKA robotic arm</strong> paired with an <strong>Allegro hand </strong>to
-                        achieve functional grasps that enable these objects to perform their intended tasks.
+                        We employ a <strong>KUKA robotic arm</strong> in conjunction with an 
+                        <strong>Allegro hand</strong>. The primary object of study is a <b>3D-printed plier</b>, 
+                        scaled to match the dimensions of the Allegro hand. Compared to commercially available 
+                        pliers, the 3D-printed variant exhibits distinct properties, including reduced weight, 
+                        an enlarged contact surface for finger interaction, and lower spring tension, 
+                        facilitating a more controlled squeezing motion.
                     </p>
 
 
                     <h3>Approach</h3>
-                    <h4>Functional Grasping Stages</h4>
-                    <p>Functional grasping can be divided into two main stages:</p>
-                    <p><strong>Grasping the Object:</strong></p>
+                    <p>
+                        Functional grasping can be systematically divided into two key stages:
+                    </p>
+
+                    <p><strong>1. Object Grasping</strong></p>
+                    <p>
+                        In this initial stage, the robotic hand establishes a grasp on the object. To qualify as a 
+                        <b>correct</b> grasp, the following conditions must be met:
+                    </p>
+
                     <ul>
-                        <li>The grasp must be stable, allowing the object to be picked up without slipping or shifting.
-                        </li>
-                        <li>The grasp must align with the object’s functionality, enabling immediate use without
-                            requiring additional in-hand manipulation.</li>
+                        <li><strong>Stability:</strong> The grasp must ensure a secure hold, preventing the object 
+                            from slipping or shifting during manipulation.</li>
+                        <li><strong>Functional Alignment:</strong> The grasp must be positioned in a manner that 
+                            facilitates the object's intended function, minimizing the need for additional in-hand 
+                            reorientation or adjustment.</li>
                     </ul>
-                    <div class="text-image-vertical">
-                        <img src="../images/research/iprl_project_page/experiment_setup.png" alt="Grasping example">
+
+                    <p>
+                        A grasp that satisfies both criteria enables the transition to the subsequent stage of 
+                        functional manipulation, where the object is actively used according to its designed affordances.
+                    </p>
+
+
+                    <h4>2. Object Manipulation</h4>
+                    <p>
+                        In this post-grasp stage, the robotic hand must effectively manipulate the object in accordance 
+                        with its intended function. The object must move along its designated functional axis 
+                        (e.g., a plier executing an opening and closing motion). To ensure successful manipulation, 
+                        the following conditions must be met:
+                    </p>
+                    <ul>
+                        <li><strong>Trajectory Alignment:</strong> The manipulation must strictly follow the object's 
+                            functional trajectory, maintaining consistency with its intended use.</li>
+                        <li><strong>Grip Retention:</strong> The object must remain securely grasped throughout multiple 
+                            iterations of the manipulation process, without unintended slipping or dropping.</li>
+                    </ul>
+                    <p>
+                        Meeting these criteria ensures that the robotic system can not only grasp objects effectively 
+                        but also perform task-specific operations with stability and precision.
+                    </p>
+
+                    <h3>Experiment Setup</h3>
+                    <div class="experiment-setup">
+                        <div class="text">
+                            <p>
+                                The experimental setup is designed to satisfy both grasping and post-grasp manipulation conditions. 
+                                The plier is positioned on a dedicated stand beneath the Allegro hand to ensure a controlled grasping 
+                                environment. Although not depicted in Figure 2, an <b>RGB-D camera</b> is integrated into the system to 
+                                facilitate point cloud generation for object perception and grasp planning.
+                            </p>
+                            <ul class="no-bullets">
+                                <li><strong>1. Object Placement:</strong> The plier is securely positioned on a dedicated holder to maintain 
+                                    a consistent initial pose.</li>
+                                <li><strong>2. Point Cloud Generation:</strong> A ZED stereo camera captures a partial point cloud of 
+                                    the scene, providing a 3D representation of the object.</li>
+                                <li><strong>3. Affordance Prediction:</strong> A one-shot affordance prediction model, DINO [4], 
+                                    is employed to generate both <b>2D and 3D affordance masks</b>, which are superimposed on the 
+                                    partial point cloud.</li>
+                                <li><strong>4. Grasp Synthesis:</strong> The SpringGrasp [5] framework is utilized to compute 
+                                    feasible grasp candidates based on the extracted affordance information.</li>
+                                <li><strong>5. Grasp Filtering:</strong> The generated grasp trajectories are evaluated and filtered 
+                                    based on 2D and 3D probability assessments (Eq. 1), ensuring the selection of a high-confidence 
+                                    precision grasp.</li>
+                                <li><strong>6. Object Grasping:</strong> The Allegro hand executes the selected grasp to pick up 
+                                    the object from the stand, assessing stability and alignment with the functional constraints.</li>
+                                <li><strong>7. Functional Manipulation:</strong> The robotic system undergoes iterative learning 
+                                    through multiple demonstrations to refine and optimize functional object usage.</li>
+                            </ul>
+                        </div>
+                        <div class="image-container-vertical">
+                            <figure class="image-container">
+                                <img src="../images/research/iprl_project_page/2_experiment_setup.png" style="width: 320px; height: 420px;">
+                                <figcaption>Figure 2: Experimental setup.</figcaption>
+                            </figure>
+                            <figure class="image-container">
+                                <img src="../images/research/iprl_project_page/1_contact_rate.png" style="width: 300px; height: 50px;">
+                                <figcaption style="width: 300px;">Equation 1: Contact Rate.</figcaption>
+                            </figure>
+                        </div>
                     </div>
-                    <h4>Using the Object (Post-Trajectory Manipulation)</h4>
+
+
+                    <h3>Evaluation Method</h3>
+                    <p>
+                        The primary challenge lies in establishing robust functional grasps. My goal was to come up with a evaluation method that can answer the question "Is it a functional grasp?" for a proposed grasp. The main objective is not to develop a new grasping method or algorithm, but rather a mechanism that can accurately evaluate the functionality and robustness of the grasp. Thus, for the grasping method, we use SpringGrasp [5], an optimization-based approach that generates robust
+                        grasps from 3D point clouds (from three different angles). The main purpose of SpringGrasp is stable grasping, thus, it does not account for the functionality or charactersitics of the object.
+                    </p>
+
                     <div class="text-image-horizontal">
                         <div class="text">
                             <p>
-                                Once the object is grasped, it must be manipulated along its functional trajectory. This
-                                stage is particularly challenging due to the complexity of articulated motion. To
-                                address this, we explored methods using fingertip force sensors and video-based visual
-                                learning.
+                                SpringGrasp computes multiple feasible grasp candidates by analyzing the point cloud and 
+                                the physical properties of rigid, non-articulated objects. However, this assumption does not 
+                                always hold in our case, as we deal with articulated objects with functional constraints. 
+                                Consequently, for the generated point cloud and potential grasp trajectories (see Figure 3), 
+                                the accuracy of a precision grasp is evaluated based on the alignment between the 
+                                robotic fingers, affordance regions, and trajectory vectors.
                             </p>
+                            
                         </div>
-                        <div class="image">
-                            <img src="../images/research/iprl_project_page/pointcloud_generation.png"
-                                alt="Post-trajectory manipulation">
-                        </div>
-                    </div>
-
-                    <h3>Methodology</h3>
-                    <p>
-                        The primary challenge lies in establishing robust functional grasps. Our goal was to build an
-                        end-to-end pipeline for grasping and using objects. To do this, we integrated recent
-                        advancements in grasping techniques.
-                    </p>
-
-                    <h4>SpringGrasp for Robust Grasp Synthesis</h4>
-                    <p>
-                        We used <strong>SpringGrasp</strong>, an optimization-based approach that generates robust
-                        grasps from 3D point clouds, as the foundation for the first stage. While effective for stable
-                        grasping, SpringGrasp does not account for object articulation or functional trajectories.
-                    </p>
-                    <!-- <div class="text-image-vertical">
-                <img src="../images/research/iprl_project_page/" alt="SpringGrasp illustration">
-            </div> -->
-
-                    <h4>AffCorrs for Affordance Integration</h4>
-                    <p>
-                        To address this limitation, we incorporated the <strong>AffCorrs</strong> method, which combines
-                        affordance detection with robust grasping to ensure functionality. AffCorrs predicts affordance
-                        regions on objects, providing insights into where the object should be grasped to enable its
-                        intended function.
-                    </p>
-                    <div class="text-image-horizontal">
-                        <div class="text">
-                            <p>
-                                SpringGrasp typically suggests multiple grasping options (5–8 scenarios), many of which
-                                may not consider an object’s revolute or prismatic joints. To refine these options, we
-                                introduced <strong>multi-affordance mask alignment</strong>, complemented by metrics
-                                such as Intersection over Union (IoU) and Chamfer Distance, to evaluate grasp
-                                functionality.
-                            </p>
-                        </div>
-                        <div class="image">
-                            <img src="../images/research/iprl_project_page/contact_rate.png" alt="AffCorrs method">
-                        </div>
-                    </div>
-
-                    <h4>Central Question</h4>
-                    <p>
-                        Our primary question was: <strong>“Is it a functional grasp?”</strong>
-                    </p>
-                    <p>
-                        This question is critical because the object must be appropriately grasped before progressing to
-                        robot learning methods for manipulation. Previous work, such as that by Agarwal et al.,
-                        demonstrated functional grasping for objects like hammers, drills, screwdrivers, and spray
-                        bottles. However, a closer analysis of example videos reveals functional shortcomings,
-                        particularly for drills and spray bottles, where specific finger placements are essential. This
-                        highlights the importance of robust and precise grasp evaluation.
-                    </p>
-
-                    <p>
-                        In our work, the focus was on using affordance detection and optimization-based methods to
-                        finalize a functional grasp. My contribution primarily involved working in the 3D point cloud
-                        space to visualize and enhance proposed grasps.
-                    </p>
-                    <div class="text-image-vertical">
-                        <img src="../images/research/iprl_project_page/contact_rate.png"
-                            alt="3D Point Cloud visualization">
+                        <figure class="image-container">
+                            <img src="../images/research/iprl_project_page/3_contact_rate.png" style="width: 400px; height: 200px;">
+                            <figcaption style="width: 400px;">Figure 3: Color vectors represent fingers of Allegro hand. The orange points are overlapped predicted affordance regions.</figcaption>
+                        </figure>
                     </div>
 
 
                     <h3>Pipeline</h3>
-                    <ol>
-                        <li><strong>3D Object Reconstruction:</strong> We used a stereo camera to capture partial 3D
-                            point clouds of objects, providing a detailed spatial representation.</li>
-                        <li><strong>Affordance Prediction with DINO V2:</strong> Using DINO V2, we generalized
-                            affordance predictions to identify regions suitable for grasping. This method achieved a
-                            promising accuracy of approximately 60%.</li>
-                        <li><strong>Grasp Generation and Evaluation:</strong> We fed this data into the SpringGrasp
+                    <ul class="no-bullets">
+                        <li><strong>1. 3D Object Reconstruction:</strong> A single stereo camera is employed to capture a 
+                            partial 3D point cloud of various objects, with a primary focus on the plier. This process 
+                            provides a sparse yet informative spatial representation of the object’s geometry.  
+                            To predict affordance regions for novel objects, we utilize AffCorrs [4], a model that 
+                            leverages hand-annotated query images for affordance learning. Initially, these affordance 
+                            predictions are generated in 2D image space and subsequently mapped onto the corresponding 
+                            3D point cloud representation (see Figure 4), enabling spatially-aware affordance reasoning.
+                        </li>
+                        
+                        <figure class="image-container">
+                            <img src="../images/research/iprl_project_page/4_pcd_gen.png" style="width: 550px; height: 200px;">
+                            <figcaption style="width: 400px;">Figure 4: Affordance prediction in 2D and 3D space.</figcaption>
+                        </figure>
+                        
+                        <li><strong>2. Grasp Generation and Evaluation:</strong> We feed the partial point cloud into the SpringGrasp
                             model to generate stable grasps, which were then evaluated using multi-affordance alignment
-                            metrics. This allowed us to predict functional grasps without physical execution.</li>
-                    </ol>
-                    <div class="text-image-horizontal">
-                        <div class="text">
-                            <p>
-                                We fed this data into the SpringGrasp model to generate stable grasps, which were then
-                                evaluated using multi-affordance alignment metrics. This allowed us to predict
-                                functional grasps without physical execution.
-                            </p>
-                        </div>
-                        <div class="image">
-                            <img src="../images/research/iprl_project_page/pointcloud_generation.png"
-                                alt="Evaluation process">
-                        </div>
-                    </div>
+                            metrics (both 2D and 3D). This allowed us to predict functional grasps without physical execution, basically stream-lining the grasp prediction without doing costly real-world experiments.
+                        </li>
+                        <li>
+                            <div class="text-image-horizontal">
+                                <div class="text">
+                                    <p>
+                                        <strong>3. Parameter Optimization:</strong> Through iterative grasp generation across various objects with 
+                                        differing point cloud characteristics, we optimized the <b>SpringGrasp</b> parameters to enhance grasp feasibility. 
+                                        SpringGrasp initializes from pre-grasp positions, which significantly influence the resulting grasp quality. 
+                                        More precise pre-grasp positions reduce the number of generated grasps while improving their overall feasibility.  
+                                    </p>
+                                    <p>
+                                        To determine optimal pre-grasp positions, we leverage object geometry and human grasping intuition. 
+                                        In human grasping, the palm naturally aligns parallel to an object's flat surface, forming an <b>orthogonal</b> relationship with the <b>z-axis</b> of the plane defined by the object. As illustrated in Figure 5, the blue vector 
+                                        represents the z-axis, and the object plane is aligned across the wider, flatter axis. This alignment is 
+                                        determined using a bounding box derived from the object's geometric properties.  
+                                    </p>
+                                    <p>
+                                        By utilizing the axis and dimensions of the bounding box, we refine the hyperparameter range for SpringGrasp, 
+                                        ensuring more efficient and accurate grasp generation. Future work can extend this methodology to develop 
+                                        an optimized loss function for grasp evaluation.
+                                    </p>
+                                </div>
+                            
+                                <div class="image-container-vertical">
+                                    <figure class="image-container">
+                                        <img src="../images/research/iprl_project_page/5_pcd_ortho.png" style="width: 300px; height: 300px;">
+                                        <figcaption style="width: 300px;">Figure 5: Identifying the orthogonal axis relative to the object plane using bounding box geometry.</figcaption>
+                                    </figure>
+                                    <figure class="image-container">
+                                        <img src="../images/research/iprl_project_page/6_pcd_ortho_2.png" style="width: 300px; height: 300px;">
+                                        <figcaption style="width: 300px;">Figure 6: Further visualization of the orthogonal axis alignment (post-grasp generation).</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h3>Results</h3>
                     <p>
-                        Results showed a strong correlation between 2D and 3D affordance generalization accuracy. We
-                        tracked the success of our multi-affordance alignment method by comparing the robot’s grasps to
-                        the correct affordance regions.
+                        Results indicate a strong correlation between 2D and 3D affordance generalization accuracy. The effectiveness of our multi-affordance alignment method was assessed by comparing the robot’s executed grasps against the corresponding ground truth affordance regions, ensuring accurate alignment with the intended functionality.
                     </p>
+                    <figure class="image-container">
+                        <img src="../images/research/iprl_project_page/7_results.png" style="width: 700px; height: 350px;">
+                        <figcaption style="width: 700px;">Figure 7: Intersection over Union (IoU) for evaluating 2D affordance predictions and Chamfer Distance for assessing 3D affordance alignment.</figcaption>
+                    </figure>
+
+                    <p>
+                        In the grasp evaluation process, ensuring a <strong>clean and well-structured point cloud</strong> is 
+                        critical for achieving <strong>stable and functional grasps</strong>. Several factors influence the 
+                        success of grasp selection and execution:
+                    </p>
+                    
+                    <ul>
+                        <li><strong>Full Point Cloud > Predicted Affordance Mask:</strong> A complete point cloud provides 
+                            richer contextual information, enhancing affordance predictions and improving the identification 
+                            of optimal graspable regions.</li>
+                        
+                        <li><strong>Outlier Removal for Wrist Pose Stability:</strong> A <strong>cleaned point cloud</strong>, 
+                            free of outliers and disconnected clusters, is essential for maintaining accurate initial wrist 
+                            poses. Unfiltered noise can significantly degrade grasp feasibility.</li>
+                        
+                        <li><strong>Impact of Wrist Pose on Grasp Selection:</strong> Variations in the <strong>initial wrist 
+                            position</strong> directly influence grasp selection, affecting both the stability and 
+                            functionality of the final executable grasp.</li>
+                        
+                        <li><strong>Optimization of Grasp Scoring:</strong> A <b>grasp scoring mechanism</b> enables 
+                            a more effective comparison of multiple feasible grasps, improving selection robustness.</li>
+                        
+                        <li><strong>Physically Infeasible Grasps Due to Wrist Position:</strong> Even a <strong>high-score 
+                            grasp</strong> may be <strong>physically infeasible</strong> if the <strong>initial wrist position</strong> 
+                            is misaligned, emphasizing the importance of precise pose estimation.</li>
+                    </ul>
+                    
 
                     <h3>Limitations and Future Work</h3>
                     <div class="text-image-horizontal">
-                        <div class="image">
-                            <img src="../images/research/iprl_project_page/isaacgym_plier.png"
-                                alt="Limitations illustration">
-                        </div>
+                        <figure class="image-container">
+                            <img src="../images/research/iprl_project_page/8_future_work_sim.png" style="width: 350px; height: 350px;">
+                            <figcaption style="width: 350px;">Figure 8: IsaacGym with Plier from PartNet-Mobility-Dataset.</figcaption>
+                        </figure>
                         <div class="text">
                             <p>
-                                Our initial plan included exploring both imitation learning and reinforcement learning
-                                methods. However, collecting demonstrations for imitation learning proved challenging.
-                                For instance, 3D-printed pliers scaled to the Allegro hand posed significant
-                                difficulties for demonstration collection.
+                                Embedding physical world knowledge into robotic systems remains a formidable challenge. 
+                                In the context of dexterous manipulation, accurately modeling and understanding 
+                                intrinsic object characteristics is particularly complex. Additionally, while reinforcement 
+                                learning (RL) holds significant promise, the inherent challenges of reward function design, 
+                                including its complexity and sparsity, present major obstacles in robotic learning.  
                             </p>
+                            
                             <p>
-                                Moving forward, we plan to:
+                                By the conclusion of the eight-week research period, I was unable to develop a sufficiently 
+                                effective reward function to guide the Allegro hand in achieving stable object grasping. 
+                                Although sim-to-real transfer is a viable approach for training robotic systems, several 
+                                barriers persist, including the steep learning curve of simulation software and the difficulty 
+                                of accurately modeling real-world environments. These challenges highlight the necessity of more 
+                                robust methodologies for improving the generalization and efficiency of robotic learning frameworks.
                             </p>
-                            <ul>
-                                <li>Enhance demonstration collection techniques for articulated objects.</li>
-                                <li>Expand the range of objects studied to improve generalization.</li>
-                                <li>Investigate reinforcement learning approaches to optimize functional grasping
-                                    trajectories.</li>
-                            </ul>
-
                         </div>
                     </div>
+                    <figure class="image-container">
+                        <img src="../images/research/iprl_project_page/9_rl_layout.png" style="width: 720px; height: 260px;">
+                        <figcaption style="width: 350px;">Figure 9: Proposed robot learning framework.</figcaption>
+                    </figure>
 
-                    <h3>Reflections</h3>
+
+                    <h3>Acknowledgements</h3>
                     <p>
-                        The human body is an incredible machine, capable of solving physical problems with ease.
-                        Robotics, however, still lags behind in generalizing physical actions and problem-solving. My
-                        project falls under the domain of dexterous manipulation, a field that includes recent works on
-                        spinning pens, object grasping based on geometry, and the development of task-specific robotic
-                        hands.
-                        I believe that effective manipulation of an object heavily depends on the quality of the grasp.
-                        Unless significant advancements are made in in-hand manipulation (adjusting an object’s position
-                        post-grasp), grasping will remain a bottleneck for robotic functionality.
+                        I express my sincere gratitude to the Stanford LINXS program for hosting the 2024 summer cohort and providing an invaluable research opportunity. A special thanks to Aimee C. Garza for her dedication in organizing an exceptional program that fostered both learning and collaboration.
                     </p>
                     <p>
-                        Reinforcement learning, while promising, is difficult to apply to dexterous manipulation.
-                        Designing effective reward functions is complex, and policies often require extensive tuning.
-                        Despite these challenges, reinforcement learning has shown the potential to outperform humans in
-                        specific areas, offering exciting possibilities for the future.
+                        I am also deeply grateful to my research mentors, Claire Chen and Professor Jeannette Bohg, for welcoming me into IPRL. Their patience, guidance, and enthusiasm have been instrumental in expanding my understanding of robotics. Their willingness to mentor and share their expertise has truly inspired me throughout this journey.
                     </p>
-                    <div class="text-image-vertical">
-                        <img src="../images/research/iprl_project_page/evaluation_results.png"
-                            alt="Reflection on robotics">
-                    </div>
-                    <div class="text-image-vertical">
-                        <img src="../images/research/iprl_project_page/contact_rate_eq.png"
-                            alt="Reflection on robotics">
-                    </div>
-                    <div class="text-image-vertical">
-                        <img src="../images/research/iprl_project_page/rl_overview.png" alt="Reflection on robotics">
-                    </div>
-                    <div class="text-image-vertical">
-                        <img src="../images/research/iprl_project_page/rl_layout.png" alt="Reflection on robotics">
-                    </div>
 
                     <h3>References</h3>
-                    <ul>
-                        <li>Chen, Sirui, Jeannette Bohg, and C. Karen Liu. "SpringGrasp: An optimization pipeline for
-                            robust and compliant dexterous pre-grasp synthesis." <i>arXiv preprint arXiv:2404.13532</i>
-                            (2024).</li>
-                        <li>Hadjivelichkov, Denis, et al. "One-shot transfer of affordance regions? AffCorrs!"
-                            <i>Conference on Robot Learning.</i> PMLR, 2023.</li>
-                        <li>Wang, Jun, et al. "Lessons from Learning to Spin Pens." <i>arXiv preprint
-                                arXiv:2407.18902</i> (2024).</li>
-                        <li>Agarwal, Ananye, et al. "Dexterous functional grasping." 7th Annual Conference on Robot
-                            Learning. 2023.</li>
-                        <li>Katz, Dov. Interactive perception of articulated objects for autonomous manipulation.
-                            University of Massachusetts Amherst, 2011.</li>
-                    </ul>
+                    <section class="references">
+                    <p>
+                        [1] Agarwal, Ananye, et al. "Dexterous functional grasping." 7th Annual Conference on Robot
+                        Learning. 2023.
+                    </p>
+                    <p>
+                        [2] Bohg, Jeannette, et al. "Data-driven grasp synthesis—a survey." IEEE Transactions on robotics 30.2 (2013): 289-309.
+                    </p>
+                    <p>
+                        [3] Zeng, Andy, et al. "Robotic pick-and-place of novel objects in clutter with multi-affordance grasping and cross-domain image matching." The International Journal of Robotics Research 41.7 (2022): 690-705.
+                    </p>
+                    <p>
+                        [4]  Hadjivelichkov, Denis, et al. "One-shot transfer of affordance regions? AffCorrs!"
+                        Conference on Robot Learning. PMLR, 2023.
+                    </p> 
+                    <p>
+                        [5] Chen, Sirui, Jeannette Bohg, and C. Karen Liu. "SpringGrasp: An optimization pipeline for robust and compliant dexterous pre-grasp synthesis." arXiv preprint arXiv:2404.13532
+                            (2024).
+                    </p>
+                    </section>
+
                 </article>
             </section>
         </main>
