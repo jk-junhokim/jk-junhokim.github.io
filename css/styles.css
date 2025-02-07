@@ -4,12 +4,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
-    color: #333;
+    color: #080808;
 }
 
 :root {
     --primary-color: #007bff;
-    --secondary-color: #555;
+    --secondary-color: #000000;
     --accent-color: #0f31ad;
     --background-color: #f9f4e8;
     --muted-color: #888;
