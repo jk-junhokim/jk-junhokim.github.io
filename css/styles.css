@@ -75,20 +75,36 @@ body {
 }
 
 
+
+
+.social-links {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    gap: 15px; /* Space between icons */
+    margin-top: 10px; /* Space from the profile pic */
+}
+
 .social-links a {
-    font-size: 24px;
-    color: #333; /* Default icon color */
+    font-size: 28px; /* Icon size */
+    color: #333; /* Default color */
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
-  
+
 .social-links a:hover {
-    color: #0077b5; /* LinkedIn Blue */
+    color: #0077b5; /* Change color on hover */
     transform: scale(1.2);
 }
+
+/* Ensure the profile container is column-aligned */
+.profile-container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align all content */
+    text-align: center;
+}
+
   
   
-
-
 
 .about-text {
     font-size: 1rem;
