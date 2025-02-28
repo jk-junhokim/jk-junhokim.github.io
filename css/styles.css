@@ -79,14 +79,16 @@ body {
     font-size: 24px;
     color: #333; /* Default icon color */
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-  }
+}
   
-  .social-links a:hover {
+.social-links a:hover {
     color: #0077b5; /* LinkedIn Blue */
     transform: scale(1.2);
-  }
-
+}
   
+  
+
+
 
 .about-text {
     font-size: 1rem;
