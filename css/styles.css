@@ -49,7 +49,7 @@ body {
     border-bottom: 2px solid var(--primary-color);
 }
 
-/* Card Styling for Sections */
+/* Card Styling */
 .card {
     background-color: var(--background-color);
     padding: 20px;
@@ -60,59 +60,75 @@ body {
 }
 
 /* Profile Section */
-.about-section .profile-container {
+.about-section {
     display: flex;
     gap: 20px;
     align-items: center;
 }
 
+/* .about-section .profile-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+} */
+
 .profile-pic {
-    width: 200px;
-    height: 200px;
+    width: 270px;
+    height: 270px;
     border-radius: 5px;
     object-fit: cover;
-    border: 2px solid #ccc;
+    border: 2px solid #f9f4e8;
 }
 
 
 
+/* Ensure side-by-side layout */
+.profile-container {
+    display: flex;
+    align-items: center; /* Vertically aligns profile pic & text */
+    gap: 20px; /* Space between profile pic and description */
+}
 
+/* Wraps profile image and social links */
+.profile-left {
+    display: flex;
+    flex-direction: column; /* Stack profile pic and icons vertically */
+    align-items: center; /* Center them horizontally */
+    margin-right: 10px;
+}
+
+
+/* Icons */
 .social-links {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    gap: 15px; /* Space between icons */
-    margin-top: 10px; /* Space from the profile pic */
+    justify-content: center; /* Center the icons */
+    gap: 25px; /* Space between icons */
+    margin-top: 30px; /* Space below profile pic */
 }
 
 .social-links a {
-    font-size: 28px; /* Icon size */
-    color: #333; /* Default color */
+    font-size: 24px;
+    color: #333; /* Default icon color */
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .social-links a:hover {
-    color: #0077b5; /* Change color on hover */
+    color: #0077b5; /* LinkedIn Blue */
     transform: scale(1.2);
 }
 
-/* Ensure the profile container is column-aligned */
-.profile-container {
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center align all content */
-    text-align: center;
-}
+
 
   
   
 
 .about-text {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.8;
 }
 
 .about-text a {
-    color: var(--accent-color);
+    color: var(--primary-color);
     text-decoration: none;
 }
 
@@ -131,6 +147,11 @@ body {
 .edu-exp-section ul {
     list-style-type: disc; /* Ensure bullet points */
     padding-left: 40px;    /* Indent the bullets as you prefer */
+}
+
+.edu-exp-section a {
+    color: var(--secondary-color);
+    /* text-decoration: none; */
 }
 
 
@@ -162,6 +183,13 @@ ul li .years {
     display: block;
     color: var(--muted-color);
     font-style: italic;
+    font-size: 13px;
+}
+
+ul li .issued {
+    display: block;
+    font-style: italic;
+    font-size: 13px;
 }
 
 /* Footer */
