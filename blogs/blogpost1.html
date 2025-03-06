@@ -82,6 +82,14 @@
         <p>
           Regarding image retrieval, we are experimenting with four different models. Among them, I am currently testing <a href="https://github.com/facebookresearch/dino" target="_blank">DINO [3]</a> and <a href="https://dreamsim-nights.github.io/" target="_blank">DreamSim [4]</a>. The final results will be presented in our upcoming paper.
         </p>
+        <p>
+          Here is a quick preview of our retrieval results from DreamSim. Figure 3 presents: (a) and (b) as top-1 retrieval cases, while (c) and (d) illustrate failed retrieval cases (ranked below the top 5). Our attention maps highlight the weight distribution of attentions based on [5]. Although Figure 3 showcases only four examples, we achieved a 62% top-1 retrieval accuracy and a 93% top-5 retrieval accuracy using off-the-shelf similarity models for our full dataset. Unlike conventional Siamese Neural Networks, which require extensive fine-tuning, we demonstrate that perceptual similarity models can be effectively applied to post-disaster scenarios for disaster management.
+        </p>
+
+        <figure>
+          <img src="../assets/blog/images/blog1/att_map_2.png" style="width: 1000px; height: 300px;">
+          <figcaption>Figure 3: Attention Mapping of DreamSim-DINO</figcaption>
+        </figure>
 
         <h3>References</h3>
         <section class="references">
@@ -97,6 +105,10 @@
           <p>
               [4] Fu, Stephanie, et al. "Dreamsim: Learning new dimensions of human visual similarity using synthetic data." arXiv preprint arXiv:2306.09344 (2023).
           </p>
+          <p>
+              [5] Hila Chefer, Shir Gur, and Lior Wolf.Transformer interpretability beyond attention visualization.In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 782–791, 2021.
+          </p>
+
         </section>
       </section>
     </main>
