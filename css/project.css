@@ -49,79 +49,73 @@ body {
     border-bottom: 2px solid var(--primary-color);
 }
 
-/* Research Title */
-.research-title {
-    font-size: 2rem;
+/* Page Title */
+.page-title {
+    font-size: 1.8rem;
     font-weight: bold;
     margin-bottom: 20px;
     color: #333;
-    text-align: left;
 }
 
-/* Research Section */
-.research-section {
+/* Project Container */
+.project-container {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* Research Item */
-.research-item {
-    background-color: #f9f4e8;
-    /* Light beige for box */
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-
-/* Flex container for text + image side-by-side */
-.research-content {
-    display: flex;
-    align-items: flex-start;
+    flex-wrap: wrap;     
+    gap: 20px;          
     justify-content: space-between;
 }
 
-/* Text side can occupy most of the width */
-.research-text {
-    flex: 1;
+/* Project Box */
+.project-box {
+    background-color: var(--background-color);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
 }
 
-/* Ensure image fits nicely and has spacing from the text */
-.research-image img {
-    max-width: 250px;
+@media (max-width: 900px) {
+  .project-box {
+    width: calc(50% - 20px); 
+  }
+}
+
+@media (max-width: 600px) {
+  .project-box {
+    width: 100%;
+  }
+}
+
+/* Project Image */
+.project-box img {
+    width: 100%;
     height: auto;
-    margin-left: 20px;
+    border-radius: 4px;
+    margin-bottom: 10px;
 }
 
-.research-item h3 {
+/* Project Title */
+.project-box h3 {
     font-size: 1.2rem;
     margin: 0 0 10px;
     color: #333;
 }
 
-.research-item p {
+/* Project Description */
+.project-box p {
     margin: 5px 0;
     font-size: 0.9rem;
     color: #555;
 }
 
-.research-links {
-    margin-top: 10px;
-    display: flex;
-    gap: 10px;
-}
-
-.research-links a {
+/* Project Link */
+.project-link {
     text-decoration: none;
     font-size: 0.9rem;
-    color: #007bff;
+    color: var(--primary-color);
     font-weight: bold;
-}
-
-.research-links a:hover {
-    text-decoration: underline;
 }
 
 .disabled-link {
@@ -130,6 +124,10 @@ body {
     text-decoration: none;
     opacity: 0.6;
     cursor: default;
+}
+
+.project-link:hover {
+    text-decoration: underline;
 }
 
 /* Footer */

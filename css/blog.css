@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
-    color: #333;
+    color: #000000;
 }
 
 :root {
@@ -89,20 +89,13 @@ body {
 
 /* Footer */
 .footer {
-    position: fixed; /* Fix the footer to the bottom */
-    bottom: 0;       /* Align to the bottom of the viewport */
-    left: 0;         /* Align to the left of the viewport */
-    width: 100%;     /* Ensure the footer spans the entire width */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     text-align: center;
     font-size: 0.9rem;
     color: #777;
-    /* background-color: var(--background-color); Optional for better visibility */
-    padding: 10px 0; /* Add some padding for aesthetics */
-    /* box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); Optional shadow for visual separation */
+    padding: 10px 0;
 }
-/* .footer {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #777;
-} */
+

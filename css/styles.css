@@ -73,8 +73,8 @@ body {
 } */
 
 .profile-pic {
-    width: 270px;
-    height: 270px;
+    width: 250px;
+    height: 250px;
     border-radius: 5px;
     object-fit: cover;
     border: 2px solid #f9f4e8;
@@ -120,13 +120,15 @@ body {
 
 
   
-  
 
 .about-text {
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.8;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
+  
 .about-text a {
     color: var(--primary-color);
     text-decoration: none;
